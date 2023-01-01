@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      #list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-right: 0;
+      }
+      #navbar {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        background-color: #1b2837;
+        color: white;
+        width: 99vw;
+        margin-left: 0.5vw;
+        border-radius: 10px;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        height: 6vh;
+        align-items: center;
+      }
+      p {
+        margin-left: 2%;
+      }
+      /* @media all and (max-width: 700px) {
+        p {
+          display: block;
+        }
+        #navbar {
+          display: block;
+          height: 16vh;
+        }
+        #list {
+          display: block;
+          width: 100%;
+          text-align: center;
+          list-style-type: circle;
+        }
+        li {
+          margin-top: 10px;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <navbar id="navbar">
+      <p>Reebook</p>
+      <ul id="list">
+        <li>Men</li>
+        <li>Women</li>
+        <li>Login</li>
+        <li>SingUp</li>
+      </ul>
+    </navbar>
+  </body>
+</html>
