@@ -49,40 +49,51 @@
     
 
     <div id="dropdown">
-         <div onmouseover="showshop()"
+         <div onmouseover="showshop()" onclick="location.href='/BlueMercury-Clone-Team-Practice/projectData/HTML/index.html'";
          id="shop">SHOP</div>
 
-     <div  onmouseover="shownew()"
-     id="new"  >NEW!</div>
+     <div  onmouseover="shownew()" onclick="location.href='/BlueMercury-Clone-Team-Practice/NewArrival/newArrival.html'";
+     id="new"  >NEW!</div> 
 
      <div onmouseover="showbrand()" 
-       id="brand">BRANDS</div>
+       id="brand">BRANDS</div> 
 
-     <div  onmouseover="showexplore()"
+     <div  onmouseover="showexplore()" onclick="location.href=''";
      >EXPLORE   </div>
 
-     <div onmouseover="showevent()"
+     <div onmouseover="showevent()" onclick="location.href=''";
      >EVENTS</div>
 
-     <div onmouseover="showreward()"
+     <div onmouseover="showreward()" onclick="location.href=''";
      >BLUEREWARDS</div>
 
-     <div onmouseover="showroutine()"
+     <div onmouseover="showroutine()" onclick="location.href=''";
      >ROUTINE REBOOT!</div>
 </div>
    </nav>
    <hr id="upperdropdown_hr">
    
-
+ <!-- <a href="/BlueMercury-Clone-Team-Practice/projectData/HTML/indexdd.html"></a> -->
 <!--Dropdown for shop--> 
 
   <div
   onmouseover="showshop()"
    onmouseout="hideshop('dropdown_shop')"  id="dropdown_shop">
-<div class="category">
+<div class="category"> 
   <ul >
-    <li style="color: black;" >BESTSELLERS</li>
-    <li >SKINCARE</li>
+    <li style="color: black;" >BESTSELLERS</li> 
+    <li type="none" value="SkinCare"  id = "SkinCare"><a href="/BlueMercury-Clone-Team-Practice/projectData/HTML/skinCare.html" >SKINCARE</a></li>
+        <li type="none" value="" ><a href="/BlueMercury-Clone-Team-Practice/projectData/HTML/MakeUp.html"  >MAKEUP</a></li>
+        <li type="none" value="" ><a href="/BlueMercury-Clone-Team-Practice/projectData/HTML/Mens.html" >MEN</a></li>
+        <li type="none" value="" ><a href="/BlueMercury-Clone-Team-Practice/NewArrival/Bath&Body.html" >BATH & BODY</a></li>
+        <li type="none" value="" ><a href="/BlueMercury-Clone-Team-Practice/projectData/HTML/Fragrance.html" >FRAGRANCE</a></li>
+        <li type="none" value="" ><a href="/BlueMercury-Clone-Team-Practice/NewArrival/Tools&Accessories.html" >TOOLS & ACCESSORIES </a></li>
+        <li type="none" value="" ><a href="/BlueMercury-Clone-Team-Practice/projectData/HTML/HairCare.html" >HAIR CARE</a></li>
+        <li type="none" value="" ><a href="/BlueMercury-Clone-Team-Practice/projectData/HTML/SunCare.html" >SUN CARE</a></li>
+        <li type="none" value="" ><a href="/BlueMercury-Clone-Team-Practice/projectData/HTML/Mens.html" >MEN </a></li>
+        <li type="none" value="Gifts" target=""><a href="/BlueMercury-Clone-Team-Practice/projectData/HTML/Gifts.html" >GIFTS </a></li>
+        <li type="none" value="" ><a href="/BlueMercury-Clone-Team-Practice/NewArrival/newArrival.html" >LAST CHANCE & OFFERS</a></li>
+    <!-- <li> SKINCARE</li>   
     <li>MAKEUP</li>
     <li>HAIR CARE</li>
     <li>BATH & BODY</li>
@@ -92,7 +103,7 @@
     <li>SUN CARE</li>
     <li>MEN</li>
     <li>GIFTS</li>
-    <li>LAST CHANCE & OFFERS </li>
+    <li>LAST CHANCE & OFFERS </li> -->
   </ul>
   <hr>
 </div>
