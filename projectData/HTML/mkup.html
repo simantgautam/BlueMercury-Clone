@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKEUP</title>
+    <!-- //<link href="../Jquery/javascript.js”> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@0,400;1,700&family=Poppins:ital,wght@0,700;1,100&display=swap" rel="stylesheet">
+
+    <style>
+        #outer{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            justify-content: space-evenly;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+        #category{
+            /* border:5px solid black; */
+            margin-top: 20px;
+            margin-right: -200px;
+        }
+        /* #outer> div{
+            border:5px solid brown;
+            justify-items: space-around;
+        } */
+        /* #outer>#skincare>h3{
+            display: inline-block;
+            border:5px solid brown;
+            
+        } */
+        #skincare>div{
+            margin-bottom: -20px;
+        }
+        #skincare>div:first-child{
+            display: flex;
+           
+            justify-content: space-around;
+            align-items: center;
+        }
+        #skincare h3{
+            font-size: 30px;
+            /* color:red; */
+        }
+        #skincare>div:nth-child(2){
+          margin-left: 15%;
+            /* border:5px solid brown; */
+        }
+        #outer>#skincare>#filter{
+            display: inline-block;
+            justify-content: right;
+        }
+        #outer>#skincare #filter>select{
+            padding: 10px 20px;
+            font-size: larger;
+            justify-content:right;
+            /* border:1px solid black; */
+            
+        }
+        hr{
+            width: 300px;
+        }
+        li{
+            padding: 15px;
+        }
+        li>a{
+          color: rgb(95, 90, 90);
+           text-decoration: none;
+        }
+        /* #category{
+           width: 150px;
+            border:2px solid green;
+
+        }
+        #category>a{
+            display: inline-flexbox;
+            border:5px solid green;
+        } */
+        #container{
+        width: 80%;
+        display:grid;
+        grid-template-columns: repeat(3,4fr);
+        gap:50px;
+        /* border:2px solid red; */
+        justify-content: right;
+    }
+
+    #container>.card{
+        /* border:2px solid blue; */
+        justify-content: right;
+        align-items: center; 
+        padding:20px ;
+    }
+    #container>.card>img{
+        width: 80%;
+        align-items:center
+    }
+    #Hline{
+        width: 60%;
+    }
+    #filter >span{
+        margin-right: 25px;
+        font-size: large;
+    }
+    </style>
+</head>
+<body>
+   <div id="outer">
+        <div id="category">
+            <h3>SkinCare Category</h3>
+            <hr>
+            <li type="none"><a href="">Cleanser</a></li>
+            <li type="none"><a href="">BestSellers</a></li>
+            <li type="none"><a href="">Exfoliatora & Peels</a></li>
+            <li type="none"><a href="">Eye Care</a></li>
+            <li type="none"><a href="">Gifts</a></li>
+            <li type="none"><a href="">Lip Care</a></li>
+            <li type="none"><a href="">Masks</a></li>
+            <li type="none"><a href="">moisturizers</a></li>
+            <li type="none"><a href="">Sun Care</a></li>
+            <li type="none"><a href="">Tools & Devices</a></li>
+            <li type="none"><a href="">Treatements & Serums</a></li>
+            <li type="none"><a href="">Vitamins & Suppliments</a></li>
+        </div>
+        
+        <div id="skincare">
+        <div>
+            <h3>SKINCARE</h3>
+            <div id="filter">
+            <span>SORT BY</span>
+            <select name="" id="Select">
+                <option value="featured">Featured</option>
+                <option value="new-arrival">New Arrival</option>
+                <option value="best-seller">Best Seller</option>
+                <option value="low-to-high">Price,Low to High</option>
+                <option value="high-to-low">Price,High-to-Low</option>
+            </select>
+            </div>
+        </div>
+
+            <div  id = 'container'>
+        
+            </div>
+        </div>
+    
+   </div>
+</body>
+<script>
+    let SkinCare =[
+        {img1:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060552905975-1_825x.jpg?v=1671541617', img2:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060552905975-2_825x.jpg?v=1671541617', brand : 'Augustinus Bader', name :'The Hydration Heroes With The Rich Cream', category:'CONSCIOUS BEAUTY', edition:'LIMITED EDITION',
+        price: '325',desc:'Hydrate to the fullest with this heroic skin care duo.'
+        },
+
+        {img1:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-635494263008-1_825x.jpg?v=1670536187', img2:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-635494263008-2_825x.jpg?v=1670536188', brand : 'SkinCeuticals', name :'C E Ferulic', category:'CONSCIOUS BEAUTY', edition:'LIMITED EDITION',
+        price: '169',desc:'Advanced antioxidant treatment and skin protector designed to defend against photoaging and reveal more youthful skin',
+        },
+
+        {img1:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-60treatments-817237011842-1_825x.jpg?v=1671747345', img2:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-p817237011606-3_825x.jpg?v=1671747340', brand : 'M-61', name :'PowerGlow Peel', category:'CONSCIOUS BEAUTY', edition:'LIMITED EDITION',
+        price: '118',desc:'Dramatically improve skin in 1 minute with this 1-step exfoliating peel. '
+        },
+
+        {img1:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-854161005097-1_825x.jpg?v=1671324035', img2:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-854161005097-3_75x.jpg?v=1671324036', brand : 'Tata Harper', name :'Regenerating Cleanser', category:'CONSCIOUS BEAUTY', edition:'LIMITED EDITION',
+        price: '88',desc:'4 interest-free payments of $81.25 with Klarna.', use:'A daily exfoliating treatment with physical and chemical exfoliators that smooths skin and restores radiance.',
+        },
+
+        {img1:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-747930142379-1_825x.jpg?v=1670447635', img2:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-854161005097-3_75x.jpg?v=1671324036', brand : 'La Mer', name :'The Glowing Hydration Duet', category:'CONSCIOUS BEAUTY', edition:'LIMITED EDITION',
+        price: '490',desc:'4 interest-free payments of $81.25 with Klarna.', use:'Smooth, moisturize, and create an all-around glow with this limited-edition duo encased in a keepsake box. A $640 value.',
+        },
+
+        {img1:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060534510043-1_825x.jpg?v=1669842342', img2:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060534510043-1_825x.jpg?v=1669842342', brand : 'The Light Salon', name :'Boost LED Mask', category:'CONSCIOUS BEAUTY', edition:'LIMITED EDITION',
+        price: '495',desc:'4 interest-free payments of $81.25 with Klarna.', use:'Plump, brighten, lift, treat uneven skin tone and texture, reduce fine lines and wrinkles, and heal inflammation for a hydrated, even complexion.',
+        },
+
+        
+        {img1:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060280378195-1_825x.jpg?v=1667031061', img2:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-5060280378195-2_825x.jpg?v=1667031062', brand : '111SKIN', name :'Boost LED Mask', category:'CONSCIOUS BEAUTY', edition:'LIMITED EDITION',
+        price: '115',desc:'4 interest-free payments of $81.25 with Klarna.', use:'This Essence is designed to help skin appear brighter, more luminous and visibly rejuvenated over time.',
+        },
+
+        
+        {img1:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-633222109758-1_825x.jpg?v=1667991379', img2:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-633222109758-1_825x.jpg?v=1667991379', brand : 'RéVive', name :'Masques des Yeux Revitalizing Eye Mask', category:'CONSCIOUS BEAUTY', edition:'LIMITED EDITION',
+        price: '200',desc:'4 interest-free payments of $81.25 with Klarna.', use:'A concentrated eye mask that firms and diminishes the appearance of puffiness, lines and wrinkles around the eye area.',
+        },
+
+        
+        {img1:'https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011972-1_825x.jpg?v=1671746844', img2:'hhttps://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-817237011972-4_825x.jpg?v=1671746846', brand : 'M-61', name :'Sun+Slopes Skincare Set SPF 45', category:'CONSCIOUS BEAUTY', edition:'LIMITED EDITION',
+        price: '72',desc:'4 interest-free payments of $81.25 with Klarna.', use:'Three-piece limited-edition set that hydrates and deeply nourishes to create a replenished complexion. $138 Value!',
+        },
+    ]
+    // console.log(SkinCare);
+
+    displaySkinCare(SkinCare);
+    function displaySkinCare(data){
+        data.map(function(ele){
+            //console.log(ele);
+
+            let card = document.createElement('div');
+            card.setAttribute('class', 'card');
+
+            let img = document.createElement('img');
+            img.setAttribute('src',ele.img1);
+
+            let brand = document.createElement('p');
+            brand.innerText = ele.brand;
+
+            let name = document.createElement('p');
+            name.innerText= ele.name;
+
+
+            // let category = document.createElement('h2');
+            // category.innerText= ele.category;
+
+            // let edition = document.createElement('h2');
+            // edition.innerText= ele.edition;
+
+            let price = document.createElement('h2');
+            price.innerText= '$ ' +ele.price;
+
+            // let desc = document.createElement('h2');
+            // desc.innerText= ele.desc;
+
+            card.append(img,brand,name,price);
+
+            document.querySelector('#container').append(card);
+        })
+    }
+
+    let filter = document.querySelector('#Select');
+    filter.addEventListener('change', sortByprice);
+    console.log(filter);
+
+    let arrSort = [];
+    for(let i=0; i<SkinCare.length; i++){
+        arrSort[i]= SkinCare[i];
+    }
+    function sortByprice(){
+       document.querySelector('#container').innerHTML = null;
+       let selected = document.querySelector('#Select').value;
+      
+        if(selected == 'low-to-high'){
+            arrSort.sort(function(a,b){
+               // console.log(a.price,b.price);
+                return a.price - b.price;
+            });
+            displaySkinCare(arrSort);
+        }
+        else if(selected == 'high-to-low'){
+            arrSort.sort(function(a,b){
+                return b.price - a.price;
+            });
+            displaySkinCare(arrSort);
+        }
+        else {
+            displaySkinCare(SkinCare);
+        }
+                 
+         }
+</script>
+</html>

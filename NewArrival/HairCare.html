@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/6c1f5c4092.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      body {
+        font-family: Montserrat, sans-serif;
+        color: #12285c;
+      }
+      #wholecontainer {
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        padding: 1% 3%;
+        justify-content: space-between;
+      }
+      #right-box,
+      .header-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 70%;
+      }
+      #left-box {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+      }
+      #category-box,
+      #category-box > div {
+        display: flex;
+        flex-direction: column;
+      }
+      #category-box > div > h1 {
+        font-size: 1.3rem;
+        margin-bottom: -10px;
+      }
+      #category-box > div {
+        height: 12.5vh;
+        justify-content: end;
+        border-bottom: 1px solid black;
+      }
+      #category-box > div > p {
+        font-size: 0.9rem;
+        font-style: italic;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 0 2rem;
+        min-height: 12vh;
+        align-items: center;
+      }
+      .header > h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-left: 3%;
+      }
+      .header-child {
+        flex-direction: row;
+        align-items: center;
+        width: 45%;
+        justify-content: space-between;
+      }
+      .header-child * {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .select {
+        font-size: 1.2rem;
+        height: 40px;
+        width: 65%;
+        font-weight: 300;
+        margin: 10px 10px;
+      }
+      option {
+        font-size: 1.2rem;
+        padding: 10px;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 1rem;
+        width: 95%;
+        margin: auto;
+        justify-items: center;
+      }
+      .product-container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        overflow: hidden;
+      }
+      img + h3 {
+        font-weight: 400;
+        /* margin-bottom: -10px; */
+      }
+      h3 + p,
+      h3 + p + p {
+        font-weight: 400;
+        font-size: 1.15rem;
+        box-sizing: border-box;
+        padding-right: 20%;
+      }
+      h3 + p {
+        margin: -7px 0;
+      }
+      hr {
+        width: 100%;
+      }
+      .image {
+        width: 70%;
+        margin: auto;
+        height: 50%;
+        transition: all 0.4s ease-out;
+      }
+      .image:hover {
+        transform: scale(1.4);
+      }
+      .head,
+      .head + p {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.1rem;
+        display: block;
+        margin-top: -10px;
+      }
+
+      @media all and (max-width: 968px) {
+        #wholecontainer {
+          flex-direction: column;
+          align-items: center;
+        }
+        #left-box,
+        #right-box {
+          width: 100%;
+          margin: auto;
+        }
+        #container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wholecontainer">
+      <div id="left-box"></div>
+
+      <div id="right-box">
+        <div class="header">
+          <h1>NEW ARRIVALS</h1>
+          <div class="header-child">
+            <p>SORT BY</p>
+            <select name="" id="filter" class="select">
+              <option value="Featured">Featured</option>
+              <option value="New Arrivals">New Arrivals</option>
+              <option value="Best Sellers">Best Sellers</option>
+              <option value="Low to High">Price, Low to High</option>
+              <option value="High to Low">Price, High to Low</option>
+            </select>
+          </div>
+        </div>
+        <hr />
+        <div id="container"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var All = JSON.parse(localStorage.getItem("mainProducts"));
+    var PageName = "HairCare";
+    var PageProducts = All.filter((element) => {
+      return element.pageCategory === "HairCare";
+    });
+    displayProducts(PageProducts);
+
+    // Display function
+    function displayProducts(arr) {
+      if (arr.length > 24) {
+        arr = arr.splice(0, 24);
+      }
+      document.getElementById("container").innerHTML = "";
+      arr.map((element, index) => {
+        const container = document.getElementById("container");
+
+        container.innerHTML += `
+    <div class="product-container>
+        <i class=""></i>     
+        <p class="head">${element.merchbadge}<i class="fa-solid fa-2x fa-heart" id="heart${index}" onclick="wishlist(PageProducts[${index}], ${index})"></i></p>
+        <p>${element.merchbadge1}</p>     
+        <img src="${element.Image}" alt="${element.Title}" class="image"/>
+        <h3>${element.productcard__brand}</h3>
+        <p>${element.Title}</p>
+        <p>$${element.Price}</p>
+    </div>
+
+`;
+      });
+    }
+    //Addding to Whistlist
+    function wishlist(element, ind) {
+      const newWhistlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      if (element.wishlist !== undefined) {
+        alert("Product already in Wishlist");
+      } else {
+        element.wishlist = ind;
+        newWhistlist.push(element);
+      }
+      document.getElementById("heart" + ind).style.color = "red";
+      localStorage.setItem("wishlist", JSON.stringify(newWhistlist));
+    }
+    displayCategories(PageName);
+    function displayCategories(arr) {
+      document.getElementById("left-box").innerHTML = `
+    
+      <h1>FILTER ${PageName} BY</h1>
+        <div class="slection">
+          <select name="" id="type-filter" class="select">
+          <option selected disable>Type</option>
+            <option value="After Sun Care">After Sun Care</option>
+            <option value="Body Wash">Body Wash</option>
+            <option value="Brush Sets">Brush Sets</option>
+            <option value="Conditioners">Conditioners</option>
+            <option value="Curling Irons">Curling Irons</option>
+            <option value="Diffusers">Diffusers</option>
+            <option value="Exercise Bands">Exercise Bands</option>
+            <option value="Eye Creams">Eye Creams</option>
+            <option value="Eye Palette">Eye Palette</option>
+            <option value="Face Mask">Face Mask</option>
+            <option value="Face Wash">Face Wash</option>
+            <option value="Hair Oil">Hair Oil</option>
+            <option value="Hair Serums">Hair Serums</option>
+            <option value="Lipstick">Lipstick</option>
+            <option value="Shampoo">Shampoo</option>
+          </select>
+        </div>
+        <div class="slection">
+          <select name="" id="brand-filter" class="select">
+          <option selected disable >Brand</option>
+            <option value="Bumble And Bumble">Bumble And Bumble</option>
+            <option value="M-61">M-61</option>
+            <option value="Ourself">Ourself</option>
+            <option value="Seen">Seen</option>
+            <option value="SkinCeuticals">SkinCeuticals</option>
+          </select>
+        </div>
+        <div class="slection">
+          <select name="" id="concern-filter" class="select">
+          <option selected disable >Concern</option>
+            <option value="Acne And Blemishes">Acne And Blemishes</option>
+            <option value="Black Heads And Visible Pores">Black Heads And Visible Pores</option>
+            <option value="Dullness">Dullness</option>
+            <option value="Fine Lines And Wrinkles">Fine Lines And Wrinkles</option>
+            <option value="Loss Of Firmness">Loss Of Firmness</option>
+            <option value="Rough/Bumpy Skin">Rough/Bumpy Skin</option>
+            <option value="Sun Damage">Sun Damage</option>
+          </select>
+        </div>
+        <div class="slection">
+          <select name="" id="size-filter" class="select">
+          <option selected disable>Size</option>
+            <option value="Jumbo And Value Size">Jumbo And Value Size</option>
+            <option value="Travel Size">Travel Size</option>
+            <option value="Classic">Classic</option>
+            <option value="Votive">Votive</option>
+          </select>
+        </div>
+        <div class="slection">
+          <select name="" id="ingredient-filter" class="select">
+          <option selected disable >Ingredient Preference</option>
+            <option value="Naturally Derived">Naturally Derived</option>
+            <option value="Retinols">Retinols</option>
+            <option value="Bakuchiol">Bakuchiol</option>
+            <option value="Salicylic Acid">Salicylic Acid</option>
+            <option value="Vitamin B5">Vitamin B5</option>
+          </select>
+        </div>
+
+`;
+    }
+    //First Filter
+    const filter = document.getElementById("filter");
+    filter.addEventListener("change", () => {
+      let value = filter.value;
+      let newProductArray = [];
+      if (value === "Low to High" || value === "High to Low") {
+        // sorting
+        if (value === "Low to High") {
+          PageProducts.sort((a, b) => {
+            return a.Price - b.Price;
+          });
+        } else {
+          PageProducts.sort((a, b) => {
+            return b.Price - a.Price;
+          });
+        }
+        displayProducts(PageProducts);
+      } else {
+        //Filtering
+        if (value === "Featured") {
+          newProductArray = All.filter((element) => {
+            return element.merchbadge1 === "LIMITED EDITION";
+          });
+        } else if (value === "New Arrivals") {
+          newProductArray = All.filter((element) => {
+            return element.merchbadge === "NEW";
+          });
+        } else if (value === "Best Sellers") {
+          newProductArray = All.filter((element) => {
+            return element.merchbadge1 === "CONSCIOUS BEAUTY";
+          });
+        }
+        displayProducts(newProductArray);
+      }
+    });
+
+    //Left Side Filter
+
+    let typefilter = document.getElementById("type-filter");
+    typefilter.addEventListener("change", () => {
+      let value = typefilter.value;
+      let newArray = PageProducts;
+      newArray = All.filter((element) => {
+        return element.type === value;
+      });
+      displayProducts(newArray);
+    });
+
+    let brandfilter = document.getElementById("brand-filter");
+    brandfilter.addEventListener("change", () => {
+      let value = brandfilter.value;
+      let newArray = PageProducts;
+      newArray = All.filter((element) => {
+        return element.productcard__brand === value;
+      });
+      displayProducts(newArray);
+    });
+
+    let concernfilter = document.getElementById("concern-filter");
+    concernfilter.addEventListener("change", () => {
+      let value = concernfilter.value;
+      let newArray = PageProducts;
+      newArray = All.filter((element) => {
+        return element.concern === value;
+      });
+      displayProducts(newArray);
+    });
+
+    let sizefilter = document.getElementById("size-filter");
+    sizefilter.addEventListener("change", () => {
+      let value = sizefilter.value;
+      console.log(value);
+      let newArray = PageProducts;
+      newArray = All.filter((element) => {
+        return element.size === value;
+      });
+      console.log(newArray);
+      displayProducts(newArray);
+    });
+
+    let ingredientfilter = document.getElementById("ingredient-filter");
+    ingredientfilter.addEventListener("change", () => {
+      let value = ingredientfilter.value;
+      console.log(value, PageProducts);
+      let newArray = PageProducts;
+      newArray = All.filter((element) => {
+        return element.ingredient === value;
+      });
+      console.log(newArray);
+      displayProducts(newArray);
+    });
+  </script>
+</html>
