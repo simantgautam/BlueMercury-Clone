@@ -1,9 +1,10 @@
 var xshop=document.getElementById("dropdown_shop");
 function showshop(){
   xevent.style.display="none";
+  xnew.style.display="none";
   xshop.style.display="block";
   xshop.style.display="flex";
-  xshop.display.border.color="1px solid crimson"
+  xshop.display.border.color="1px solid black"
 }
 function hideshop(){
   xshop.style.display="none";

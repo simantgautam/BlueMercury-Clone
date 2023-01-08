@@ -90,11 +90,18 @@ body{
   color: rgb(141, 141, 211);
 
 }
+#brand:hover{
+  text-decoration: underline;
+  text-underline-offset: 25px;
+  text-decoration-color: rgb(7, 7, 14);
+  text-decoration-thickness: 5px;
+}
 #dropdown >div:hover{
   text-decoration: underline;
   text-underline-offset: 26px;
   text-decoration-color: rgb(7, 7, 14);
 }
+
 #brand{
   text-decoration: underline;
   text-underline-offset: 25px;
@@ -102,20 +109,22 @@ body{
   text-decoration-thickness: 3px;
 }
 
-
-
  #dropdown_shop{
-  width: 80%;
-  margin-left: 10%;
+  width: 101%;
+  margin-left: -1%;
+  margin-top: -11px;
   height: 450px;
   display: none;
   margin-bottom: 50px;
    background-color:white; 
+   position: absolute;
+   z-index: 2;
  }
 
  .category{
 width: 25%;
 height: 100%;
+margin-left: 10.2%;
 display: flex;
  }
  
@@ -411,13 +420,13 @@ color: rgb(54, 53, 53);
   
 
 
-
+/***************MARGIN TOP=-10PX(EVENT,BLUEREWARDS,ROUTINE REBOOT!********************************************/
 
 #event_box{
   width: 100%;
   height: 400px;
   background-color: white;
-  margin-top: -11px;
+  margin-top: -10px;
   margin-left: -2%;
    position: absolute;
    display: none;
@@ -474,7 +483,7 @@ color: rgb(54, 53, 53);
   width: 101.5%;
   height: 400px;
   background-color: white;
-  margin-top: -11px;
+  margin-top: -10px;
   margin-left: -2%;
   display: none;
    position: absolute;
@@ -512,7 +521,7 @@ color: rgb(54, 53, 53);
     width: 101.5%;
     height: 400px;
     background-color: white;
-    margin-top: -11px;
+    margin-top: -10px;
     margin-left: -2%;
     display: none;
      position: absolute;
@@ -667,6 +676,7 @@ color: rgb(54, 53, 53);
   width: 80%;
   height: 140px;
   margin-left: 10%;
+  margin-bottom: 10px;
  }
 
  .tableA{
@@ -680,6 +690,18 @@ color: rgb(54, 53, 53);
  .tableB >tr{
   color: rgb(78, 76, 76);
  }
+
+ .tableC >tr{
+  color: rgb(78, 76, 76);
+ }
+
+ .tableD >tr{
+  color: rgb(78, 76, 76);
+ }
+ .tableE >tr{
+  color: rgb(78, 76, 76);
+ }
+
 
 
  #before_footer{
