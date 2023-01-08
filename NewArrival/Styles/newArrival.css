@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: Montserrat, sans-serif;
+  color: #12285c;
+}
+#wholecontainer {
+  display: flex;
+  width: 96%;
+  max-width: 1350px;
+  margin: auto;
+  padding: 1% 3%;
+  justify-content: space-between;
+}
+#right-box,
+.header-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 72%;
+}
+#left-box {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+#category-box,
+#category-box > div {
+  display: flex;
+  flex-direction: column;
+}
+#category-box > div > h1 {
+  font-size: 1.3rem;
+  margin-bottom: -10px;
+}
+#category-box > div {
+  height: 12.5vh;
+  justify-content: end;
+  border-bottom: 1px solid black;
+}
+#category-box > div > p {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 2rem;
+  min-height: 12vh;
+  align-items: center;
+}
+.header > h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-left: 3%;
+}
+.header-child {
+  flex-direction: row;
+  align-items: center;
+  width: 45%;
+  justify-content: space-between;
+}
+.header-child * {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.select {
+  font-size: 1.2rem;
+  height: 40px;
+  width: 65%;
+  font-weight: 300;
+  margin: 10px 10px;
+}
+option {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+  width: 95%;
+  margin: auto;
+  justify-items: center;
+}
+.product-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow: hidden;
+}
+img + h3 {
+  font-weight: 400;
+  /* margin-bottom: -10px; */
+}
+h3 + p,
+h3 + p + p {
+  font-weight: 400;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+  padding-right: 20%;
+}
+h3 + p {
+  margin: -7px 0;
+}
+hr {
+  width: 100%;
+}
+.head,
+.head + p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  display: block;
+  margin-top: -10px;
+}
+/* ---------------------// whislist  ----------------*/
+.d {
+  width: 20vw;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  right: -20%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50% -50%) scale(0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  transition: all 0.8s ease-in-out;
+  box-sizing: border-box;
+  padding: 1rem 0.5rem;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  z-index: 1;
+}
+.d img {
+  width: 60%;
+  display: block;
+  margin: auto;
+  border-radius: 50% 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.d button {
+  background-color: rgb(7, 3, 93);
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  color: white;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.d p {
+  width: 95%;
+  margin: 15px auto;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-sizing: border-box;
+  padding: 7px 0;
+  border-radius: 5px;
+}
+.applied {
+  opacity: 1;
+  transform: translate(-50% -50%) scale(1);
+  right: 1%;
+}
+/* -----------------------whislist--------------------- */
+
+/* ------------quickView------------------------ */
+
+.quickview img {
+  width: 60%;
+  display: block;
+  margin: auto;
+  background-color: rgb(129, 100, 100);
+}
+.quickview:hover button {
+  opacity: 1;
+}
+.quickview {
+  position: relative;
+  /* border: 1px solid black; */
+}
+.quick {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130px;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  border: 0.5px solid black;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+/* -----------------viewBox------------------- */
+.ViewBox {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  opacity: 0;
+  grid-template-columns: repeat(2, 1fr);
+  transition: all 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.ViewBox div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding: 20px 0;
+  margin-left: 5%;
+}
+.ViewBox div:nth-child(1) {
+  background-color: rgb(245, 245, 245);
+}
+/* .ViewBox div:nth-child(3) {
+  background-color: rgb(161, 105, 105);
+  margin-top: 15px;
+} */
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  display: block;
+  width: 60%;
+  border: none;
+  background-color: rgb(236, 236, 236);
+}
+.ViewBox > div:nth-child(2) > div + button {
+  font-size: 1.4rem;
+  background-color: #12284c;
+  color: white;
+  border: none;
+  box-sizing: border-box;
+  padding: 0.9rem 0;
+  width: 95%;
+  margin-top: 15px;
+}
+.ViewBox > div:nth-child(2) > div + button i {
+  margin-right: 5%;
+}
+
+.proQuantity,
+.quantityBtn {
+  width: 40px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.proQuantity {
+  margin: 0 -2px;
+}
+.heart {
+  margin-left: 20%;
+  margin-right: 2%;
+  margin-top: 5px;
+}
+.heart + p {
+  font-size: 1.4rem;
+  margin-top: 7px;
+}
+.ViewBox img {
+  width: 90%;
+  height: 90%;
+  display: block;
+  margin: 5% auto;
+}
+#x {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  font-size: 2.3rem;
+  background-color: #fff;
+  border: none;
+}
+.boxApply {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  width: 750px;
+  height: 400px;
+}
+
+/* -----------------------ViewBox------------------- */
+@media all and (max-width: 968px) {
+  #wholecontainer {
+    flex-direction: column;
+    align-items: center;
+    height: 10%;
+  }
+  #left-box,
+  #right-box {
+    width: 100%;
+    margin: auto;
+  }
+  #container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
