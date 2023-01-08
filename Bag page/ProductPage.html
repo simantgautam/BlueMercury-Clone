@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProductPage</title>
+    <link rel="stylesheet" href="./Styles/ProductPage.css" />
+  </head>
+  <body>
+    <div id="parent">
+      <h1>YOUR BAG</h1>
+      <h3>Your cart(<span id="items">0</span> item)</h3>
+      <div>
+        <input type="checkbox" id="giftcheckbox" name="giftcheckbox" />
+        <label for="giftcheckbox"> IS THIS ORDER A GIFT?</label>
+        <p>The price of your order will be hidden on the gift receipt.</p>
+      </div>
+      <!-- cart details table -->
+      <table id="tableId">
+        <thead>
+          <tr>
+            <th>Ready to Ship</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Append your data here  -->
+        </tbody>
+      </table>
+      <!-- Sample gifts section -->
+      <h3>Our Gift to You</h3>
+      <p>Free trial-size products with your qualifying purchase</p>
+      <div id="gifts">
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/free-surprise-samples-main_1_small.jpg?v=1668719018"
+            alt=""
+          />
+          <button id="samples">Add 3 Samples</button>
+        </div>
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/surprise-mystery-samples-1_1.jpg?v=1668695719"
+            alt=""
+          />
+          <p>SURPRISE #1</p>
+        </div>
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/surprise-mystery-samples-1_1.jpg?v=1668695719"
+            alt=""
+          />
+          <p>SURPRISE #2</p>
+        </div>
+        <div>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/surprise-mystery-samples-1_1.jpg?v=1668695719"
+            alt=""
+          />
+          <p>SURPRISE #3</p>
+        </div>
+      </div>
+      <!-- checkout button -->
+      <div id="totalfooter">
+        <h3>Subtotal $<span id="total">0</span></h3>
+        <p>
+          Shipping, Taxes, Beauty Cards, and additional discounts applied at
+          checkout
+        </p>
+        <a href="./CustomerInfoPage.html">
+          <button>CHECKOUT</button>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script src="./Scripts/ProductPage.js"></script>
+</html>
