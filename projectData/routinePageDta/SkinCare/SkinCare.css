@@ -1,0 +1,97 @@
+#outer{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-evenly;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 18px;
+    font-size: 20px;
+    color:#12284c;
+}
+#category{
+    /* border:5px solid black; */
+    margin-top: 20px;
+    margin-right: -200px;
+    color:#12284c;
+}
+/* #outer> div{
+    border:5px solid brown;
+    justify-items: space-around;
+} */
+/* #outer>#skincare>h3{
+    display: inline-block;
+    border:5px solid brown;
+    
+} */
+#skincare>div{
+    margin-bottom: -20px;
+}
+#skincare>div:first-child{
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: center;
+}
+#skincare h3{
+    font-size: 30px;
+    /* color:red; */
+}
+#skincare>div:nth-child(2){
+  margin-left: 15%;
+    /* border:5px solid brown; */
+}
+#outer>#skincare>#filter{
+    display: inline-block;
+    justify-content: right;
+}
+#outer>#skincare #filter>select{
+    padding: 10px 20px;
+    font-size: larger;
+    justify-content:right;
+    /* border:1px solid black; */
+    
+}
+hr{
+    width: 300px;
+}
+li{
+    padding: 15px;
+}
+li>a{
+  color: rgb(95, 90, 90);
+   text-decoration: none;
+}
+/* #category{
+   width: 150px;
+    border:2px solid green;
+}
+#category>a{
+    display: inline-flexbox;
+    border:5px solid green;
+} */
+#container{
+width: 80%;
+display:grid;
+grid-template-columns: repeat(3,4fr);
+gap:50px;
+/* border:2px solid red; */
+justify-content: right;
+}
+
+#container>.card{
+/* border:2px solid blue; */
+justify-content: right;
+align-items: center; 
+padding:20px ;
+}
+#container>.card>img{
+width: 80%;
+align-items:center
+}
+#Hline{
+width: 60%;
+}
+#filter >span{
+margin-right: 25px;
+font-size: large;
+}
