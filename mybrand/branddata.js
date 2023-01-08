@@ -10577,8 +10577,8 @@ while(iA<brandA.length){
   var tr=document.createElement("tr");
 
   var td1=document.createElement("td");
-  td1.className="alink1";
   td1.innerHTML=brandA[iA++];
+  td1.className="link1";
   if(iA>=brandA.length){
     tr.append(td1);
    document.querySelector(".tableA").append(tr);
@@ -10602,7 +10602,6 @@ while(iA<brandA.length){
   td4.innerHTML=brandA[iA++];
   tr.append(td1,td2,td3,td4);
   document.querySelector(".tableA").append(tr);
-  console.log(tr);
 }
 
 
@@ -10646,7 +10645,6 @@ while(iB<brandB.length){
   td4.innerHTML=brandB[iB++];
   tr.append(td1,td2,td3,td4);
   document.querySelector(".tableB").append(tr);
-  console.log(tr);
 }
 
 
@@ -10655,7 +10653,7 @@ while(iB<brandB.length){
 
 //  table link to next page//
 
-document.querySelector(".alink1").addEventListener("click",alink1) ;
+document.querySelector(".link1").addEventListener("click",alink1) ;
 function alink1(){
-  document.location.src='file:///C:/Users/Amit/Desktop/Bluemercury-Project-main/mybrand/rahua.html';
+  window.location.href = './AcquaDiParma.html';
 }

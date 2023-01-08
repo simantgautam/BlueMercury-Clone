@@ -10,7 +10,7 @@ body{
       
       height: 60%;
       display: flex;
-      color: #016270;
+      color: #0d3e46;
   }
   .location{
       width: 15%;
@@ -39,6 +39,7 @@ body{
       height: 50%;
       display: flex;
       margin-left: 13%; 
+      cursor: pointer;
   }
   .nav_item >div{
       margin-left: 10px;
@@ -67,8 +68,6 @@ body{
       height:100%;
   }
   
-  
-  
   #upperdropdown_hr{
     width: 102%;
     margin-top: -5px;
@@ -81,6 +80,7 @@ body{
       margin-left: 12%;
       color: rgb(34, 33, 33);
      display: flex;
+     cursor: pointer;
   }
   #dropdown >div{
     margin-left: 60px;
@@ -89,24 +89,25 @@ body{
   }
   #dropdown >div:hover{
     text-decoration: underline;
-    text-underline-offset: 27px;
+    text-underline-offset: 26px;
     text-decoration-color: rgb(7, 7, 14);
   }
   #brand{
     text-decoration: underline;
-    text-underline-offset: 27px;
+    text-underline-offset: 25px;
     text-decoration-color: rgb(7, 7, 14);
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 3px;
   }
   
-  /* -dropdown_shop-*/
+  
   
    #dropdown_shop{
     width: 80%;
     margin-left: 10%;
-    height: 500px;
+    height: 450px;
     display: none;
-      background-color:white; 
+    margin-bottom: 50px;
+     background-color:white; 
    }
   
    .category{
@@ -114,6 +115,7 @@ body{
   height: 100%;
   display: flex;
    }
+   
    #dropdown_shop >hr{
     width: .5px;
     height: 90%;
@@ -126,10 +128,11 @@ body{
    .category >ul{
     list-style-type: none;  
     margin-left: -10px;
+    margin-top: 7px;
    }
    .category >ul >li{
     
-    margin-top: 17px;
+    margin-top: 20px;
     color: rgb(88, 84, 84);
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -146,7 +149,7 @@ body{
      .bycategory >ul{
       list-style-type: none;  
       margin-left: -10px;
-      margin-top: 38px;
+      margin-top: 27px;
      }
      .bycategory >ul >li{
       
@@ -169,12 +172,11 @@ body{
        .bybrand >ul{
         list-style-type: none;  
         margin-left: -10px;
-        margin-top: 38px;
+        margin-top: 27px;
        }
        .bybrand >ul >li{
-        
         margin-top: 10px;
-        color: rgb(88, 84, 84);
+        color: rgb(100, 97, 97);
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
        }
@@ -184,22 +186,384 @@ body{
         
        }
        .dropdown_img{
-        margin-top: 20px;
+        margin-top: 15px;
        }
        .dropdown_img >p{
       font-size: 14px;
       margin-top: -10px;
        }
   
-  /* -offer running ad-*/
+  
+  #new_box{
+        width: 101.5%;
+        height: 480px;
+        background-color: white;
+        margin-top: -10px;
+        display: none;
+        margin-left: -2%;
+         position: absolute;
+        z-index: 2;
+       }
+  #new_box >hr{
+    margin-top: -2px;
+  }
+  
+   #dropdown_new{
+     width: 70%;
+    margin-left: 15%;
+    height: 400px;
+    margin-top: 0;
+    display: flex;
     
+      }
+  
+  .newcategory{
+    width:25% ;
+    height:80% ;
+    margin-top: 25px;  
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+  }
+  .newcategory >ul {
+    list-style-type: none; 
+    color: rgb(100, 97, 97);
+  }
+  
+  .newcategory >ul >li{
+    margin-top: 10px;
+  }
+  .newcategory >ul >li:hover{
+    color: rgb(14, 13, 13);
+   font-size:17.5px ;
+    
+   }
+  .newcategory_img1{
+    width: 34%;
+    height: 100%;
+    font-size: 14px;
+  }
+  .newcategory_img1 >img{
+    width: 100%;
+    height: 73%;
+  }
+  .newcategory_img1 >h3{
+    font-size: 15px;
+    font-family:Arial,  sans-serif ;
+    font-weight: lighter;
+    margin-top: 3px;
+  }
+  
+  .newcategory_img2{
+    width: 35%;
+    height: 100%;
+    margin-left:5%;  
+  
+  }
+  .newcategory_img2 >img{
+    width: 100%;
+    height: 73%;
+  }
+  .newcategory_img2 >h3{
+    font-size: 15px;
+    font-family:Arial,  sans-serif ;
+    font-weight: lighter;
+    margin-top: 3px;
+  }
+  .newcategory_img2 >p{
+    font-size: 14px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #brand_box{
+    width: 102%;
+    height: 480px;
+    background-color: white;
+    margin-top: -10px;
+    margin-left: -2%;
+     position: absolute;
+     display: none;
+    z-index: 2;
+   }
+  #brand_box >hr{
+  margin-top: -2px;
+  }
+  
+  #dropdown_brand{
+  width: 80%;
+  margin-left: 12%;
+  height: 400px;
+  margin-top: 0;
+  display: flex;
+  
+  }
+  #dropdown_brand >ul{
+    list-style-type: none;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(100, 97, 97);
+  }
+  #dropdown_brand >ul:nth-child(4){
+    margin-left: 2%;
+  }
+  
+  #dropdown_brand >ul >li{
+    margin-top: 10px;
+  }
+  #dropdown_brand >ul :hover{
+    font-size: 17px;
+    color: black;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #explore_box{
+    width: 102%;
+    height: 480px;
+    background-color: white;
+    margin-top: -10px;
+    margin-left: -2%;
+      display: none;
+     position: absolute;
+    z-index: 2;
+   }
+  #explore_box >hr{
+  margin-top: -2px;
+  }
+  
+  #dropdown_explore{
+  width: 70%;
+  margin-left: 15%;
+  height: 400px;
+  margin-top: 0;
+  display: flex;
+  }
+  
+  .explorecategory{
+  width:25% ;
+  height:80% ;
+  margin-top: 25px;  
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  .explorecategory >ul {
+    color: rgb(100, 97, 97);
+  list-style-type: none; 
+  }
+  
+  .explorecategory >ul >li{
+  margin-top: 10px;
+  }
+  .explorecategory >ul >li:hover{
+  color: rgb(14, 13, 13);
+  font-size:17.5px ;
+  
+  }
+  .explorecategory_img1{
+  width: 34%;
+  height: 100%;
+  font-size: 14px;
+  }
+  .explorecategory_img1 >h3{
+  font-size: 15px;
+  font-family:Arial,  sans-serif ;
+  font-weight: lighter;
+  margin-top: 3px;
+  color: rgb(54, 53, 53);
+  }
+  .explorecategory_img1 >p{
+    color: rgb(87, 84, 84);
+  }
+  
+  
+  .explorecategory_img2{
+    width: 34%;
+    height: 100%;
+    font-size: 14px;
+    }
+    .explorecategory_img2 >h3{
+    font-size: 15px;
+    font-family:Arial,  sans-serif ;
+    font-weight: lighter;
+    margin-top: 3px;
+    color: rgb(54, 53, 53);
+    }
+    .explorecategory_img2 >p{
+      color: rgb(87, 84, 84);
+    }
+    
+  
+  
+  
+  
+  #event_box{
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    margin-top: -11px;
+    margin-left: -2%;
+     position: absolute;
+     display: none;
+    z-index: 2;
+   }
+   #event_box >hr{
+    margin-top: -2px;
+    }
+  
+   #dropdown_event{
+    width: 50%;
+    margin-left: 25%;
+    height: 400px;
+    margin-top: 0;
+    display: flex;
+    }
+  
+    .eventcategory_img1 >h3{
+      font-size: 15px;
+      font-family:Arial,  sans-serif ;
+      font-weight: lighter;
+      margin-top: 3px;
+      }
+      .eventcategory_img2 >h3{
+        font-size: 15px;
+        font-family:Arial,  sans-serif ;
+        font-weight: lighter;
+        margin-top: 3px;
+        }
+  
+        .eventcategory_img1{
+          width: 44%;
+          height: 80%;
+          font-size: 14px;
+          }
+   .eventcategory_img2{
+            width: 44%;
+            height: 80%;
+            margin-left: 5%;
+            font-size: 14px;
+  }
+  
+  #dropdown_event >div >p{
+    font-size: 14px;
+    margin-top: -10px;
+    color: rgb(100, 97, 97);
+  }
+  
+  
+  
+  
+  
+  #reward_box{
+    width: 101.5%;
+    height: 400px;
+    background-color: white;
+    margin-top: -11px;
+    margin-left: -2%;
+    display: none;
+     position: absolute;
+    z-index: 2;
+   }
+  
+   #reward_box >hr{
+    margin-top: -2px;
+    }
+    #dropdown_reward{
+      width: 40%;
+      height: 98%;
+      margin-left: 33%;
+      display: flex;
+    }
+  
+    .rewardcategory{ 
+      width:35% ;
+    }
+    .rewardcategory >ul{
+      list-style-type: none;
+      color: rgb(100, 97, 97);
+    }
+    .rewardcategory >ul >li:hover{
+      color: black;
+      font-size: 18px;
+    }
+    .reward_img{
+      width:60% ;
+    }
+  
+  
+  
+    #routine_box{
+      width: 101.5%;
+      height: 400px;
+      background-color: white;
+      margin-top: -11px;
+      margin-left: -2%;
+      display: none;
+       position: absolute;
+      z-index: 2;
+     }
+     #routine_box >hr{
+      margin-top: -2px;
+      }
+  
+      #dropdown_routine{
+        width: 70%;
+        height: 98%;
+        margin-left: 20%;
+        display: flex;
+      }
+      #dropdown_routine >div  >h3{
+        font-family:Arial,  sans-serif ;
+       font-size: 14px;
+       color: rgb(100, 97, 97);
+      }
+      #dropdown_routine >div  >p{
+        color: rgb(109, 106, 106);
+        margin-top: -8px;
+      }
+  
+      .routine_img2{
+        margin-left: 2%;
+      }
+  
+      .routinecategory >ul{
+        list-style-type: none;
+        color: rgb(109, 106, 106);
+      }
+  
+      .routinecategory >ul >li{
+        margin-top: 10px;
+      }
+      .routinecategory >ul >li:hover{
+        color: black;
+        font-size: large;
+      }
+  
+  
+  
+  
+  
     #offer{
       width: 102.4%;
       height:35px ;
       margin-left: -10px;
-      margin-top: -21.4px;
+      margin-top: -12.4px;
       background-color: rgb(206, 236, 236);
       overflow: hidden;
+     
     }
     #category_hr{
       width: 4.7%;
@@ -209,6 +573,11 @@ body{
       margin-top: -14px;
       background-color: black;
     }
+  
+  
+  
+  
+    
     .item-1, 
     .item-2, 
     .item-3 {
@@ -256,25 +625,39 @@ body{
       100% { left: 110%; opacity: 0; }
     }
   
-     /* product_details*/
-    #product_details{
-        width: 100%;
-        height: 350px;
-        text-align: center;
-        border: 1px solid crimson;
-    }
   
+  
+   
+   #box_line{
+    height: -0.1px;
+    width: 100%;
+    height:100px ;
+    margin-left: 0px;
+    margin-top: -8px;
+    align-items: center;
+  list-style-type: style white;
+   }
 
+   #product_details{
+    width: 100%;
+    height: 430px;
+    display: flex;
+}
+
+.product_details1{
+width: 52%;
+height: 430px;
+margin-left: 2%;
+font-family: Arial, Helvetica, sans-serif;
+}
+.product_details2 >img{
+width: 530px;
+height:280px;
+margin-top: 80px;
+margin-left: 50px;
+}
    
-   
-   
-   
   
-  
-  
-  
-  
-   /* footer*/
   
    .footer-part {
     display: flex;
@@ -450,13 +833,3 @@ body{
     width: 70%;
     margin: auto;
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
