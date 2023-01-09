@@ -361,6 +361,7 @@ function displayAddToCartModal(ele){
 //********************FUNCTION DISPLAY DETAILS OD PRODUCTS ******************** */
 function displayDetailsOfProducts(ele){
     document.getElementById('products-details').innerHTML = "";
+    // document.getElementById('productInfo').innerText = "";
 
     let parent =  document.createElement('div');
     parent.style.display="flex";
