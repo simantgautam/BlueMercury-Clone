@@ -10538,76 +10538,76 @@ var products = [
   ];
 
 
-localStorage.setItem("mainProducts", JSON.stringify(products));
-var All = JSON.parse(localStorage.getItem("mainProducts"));
-// sorting //
-var brandsort=[];
-for(let i=0;i<All.length;i++){
-brandsort.push(All[i]["productcard__brand"]);
-}
-brandsort=brandsort.sort();
-
-let firstHashMap=new Map();
-
-for(let i=0;i<brandsort.length;i++){
-    let data=brandsort[i];
-firstHashMap.set(data,brandsort);
-    }
-
-    var finalbrandsort=[]
-for (const x of firstHashMap.keys()) {
-    finalbrandsort.push(x);
-}
-
-
-// sorting complete final array is="finalbrandsort" //
-
-
-// cretate table//
-var brandA=[];
-for(var i=0;i<finalbrandsort.length;i++){
-    if(finalbrandsort[i].charAt(0)=='A' || finalbrandsort[i].charAt(0)=='a'){
-        brandA.push(finalbrandsort[i])
-    }
-}
-
+  localStorage.setItem("mainProducts", JSON.stringify(products));
+  var All = JSON.parse(localStorage.getItem("mainProducts"));
+  // sorting //
+  var brandsort=[];
+  for(let i=0;i<All.length;i++){
+  brandsort.push(All[i]["productcard__brand"]);
+  }
+  brandsort=brandsort.sort();
   
-var iA=0;
-while(iA<brandA.length){
-  var tr=document.createElement("tr");
-
-  var td1=document.createElement("td");
-  td1.innerHTML=brandA[iA++];
-  td1.className="link1";
-  if(iA>=brandA.length){
-    tr.append(td1);
-   document.querySelector(".tableA").append(tr);
-   break;
+  let firstHashMap=new Map();
+  
+  for(let i=0;i<brandsort.length;i++){
+      let data=brandsort[i];
+  firstHashMap.set(data,brandsort);
+      }
+  
+      var finalbrandsort=[]
+  for (const x of firstHashMap.keys()) {
+      finalbrandsort.push(x);
   }
-  var td2=document.createElement("td");
-  td2.innerHTML=brandA[iA++];
-  if(iA>=brandA.length){
-    tr.append(td1,td2);
-   document.querySelector(".tableA").append(tr);
-   break;
+  
+  
+  // sorting complete final array is="finalbrandsort" //
+  
+  
+  // cretate table//
+  var brandA=[];
+  for(var i=0;i<finalbrandsort.length;i++){
+      if(finalbrandsort[i].charAt(0)=='A' || finalbrandsort[i].charAt(0)=='a'){
+          brandA.push(finalbrandsort[i])
+      }
   }
-  var td3=document.createElement("td");
-  td3.innerHTML=brandA[iA++];
-  if(iA>=brandA.length){
-    tr.append(td1,td2,td3);
-   document.querySelector(".tableA").append(tr);
-   break;
+  
+    
+  var iA=0;
+  while(iA<brandA.length){
+    var tr=document.createElement("tr");
+  
+    var td1=document.createElement("td");
+    td1.innerHTML=brandA[iA++];
+    td1.className="link1";
+    if(iA>=brandA.length){
+      tr.append(td1);
+     document.querySelector(".tableA").append(tr);
+     break;
+    }
+    var td2=document.createElement("td");
+    td2.innerHTML=brandA[iA++];
+    if(iA>=brandA.length){
+      tr.append(td1,td2);
+     document.querySelector(".tableA").append(tr);
+     break;
+    }
+    var td3=document.createElement("td");
+    td3.innerHTML=brandA[iA++];
+    if(iA>=brandA.length){
+      tr.append(td1,td2,td3);
+     document.querySelector(".tableA").append(tr);
+     break;
+    }
+    var td4=document.createElement("td");
+    td4.innerHTML=brandA[iA++];
+    tr.append(td1,td2,td3,td4);
+    document.querySelector(".tableA").append(tr);
   }
-  var td4=document.createElement("td");
-  td4.innerHTML=brandA[iA++];
-  tr.append(td1,td2,td3,td4);
-  document.querySelector(".tableA").append(tr);
-}
-
-
-
-
-var brandB=[];
+  
+  
+  
+  
+ var brandB=[];
 for(var i=0;i<finalbrandsort.length;i++){
     if(finalbrandsort[i].charAt(0)=='B' || finalbrandsort[i].charAt(0)=='b'){
         brandB.push(finalbrandsort[i])
@@ -10786,3 +10786,6 @@ document.querySelector(".link1").addEventListener("click",alink1) ;
 function alink1(){
   window.location.href = './AcquaDiParma.html';
 }
+  
+  
+  
