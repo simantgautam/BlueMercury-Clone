@@ -574,8 +574,8 @@ sizefilter.addEventListener("click", () => {
   });
 });
 
-ingr.addEventListener("click", () => {
-  ingr.classList.toggle("open");
+ingredientfilter.addEventListener("click", () => {
+  ingredientfilter.classList.toggle("open");
   items = document.querySelectorAll(".ingredient-item");
 
   items.forEach((item) => {
