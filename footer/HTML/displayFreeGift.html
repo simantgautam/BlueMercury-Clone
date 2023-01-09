@@ -4,25 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bluemercury Near Me</title>
-    <link
-      rel="stylesheet"
-      href="/BlueMercury-Clone-Team-Practice/footer/CSS/blueMercuryFooterCSS/map.css"
-    />
+    <title>Product Detail</title>
     <script
       src="https://kit.fontawesome.com/8d89aabedd.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./CSS/displayFreeGift.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins&family=Roboto+Condensed&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* #dis {
+      } */
+    </style>
   </head>
   <body>
     <main>
-      <div id="blueRewardHeader">
+      <div id="rewardHeader">
         <div>
           <i class="fa-solid fa-location-dot"></i> Store and Spa Locater
         </div>
@@ -54,30 +55,12 @@
           >Free gifts with Purchase. Browse Now ></a
         >
       </div>
+
       <!-- Main -->
-      <div class="mapBody">
-        <div class="searchBox">
-          <div class="sb">
-            <input type="number" id="zipCode" placeholder="Zip Code" />
-            <button id="searchBtn" onclick="search()">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <p>Enter your area zip Code (e.g, 226001)</p>
-          </div>
-          <div class="shopLocation">
-            <div id="area"></div>
-          </div>
-        </div>
-        <div class="map">
-          <img
-            src="https://www.mapsofworld.com/images-mow/world-map.jpg"
-            alt="map"
-          />
-        </div>
-      </div>
 
-      <!-- ?\ Fotter Part -->
+      <div id="dis"></div>
 
+      <!-- Footer -->
       <div class="eventBox">
         <div>
           <p><i class="fa-solid fa-gift"></i></p>
@@ -208,6 +191,42 @@
       </div>
     </main>
   </body>
-</html>
+  <script>
+    var item = JSON.parse(localStorage.getItem("item-detail"));
+    var arr = [item];
+    displayElem();
 
-<script src="/Bluemercury-Project/JS/map.js"></script>
+    function displayElem() {
+      arr.map(function (elem) {
+        var div1 = document.createElement("div");
+
+        var image = document.createElement("img");
+        image.setAttribute("src", elem.Image_url);
+        image.setAttribute("alt", elem.name);
+
+        div1.append(image);
+
+        var div2 = document.createElement("div");
+
+        var name = document.createElement("h3");
+        name.textContent = elem.name;
+
+        var detail = document.createElement("h4");
+        detail.textContent = elem.detail;
+
+        var freeWith = document.createElement("p");
+        freeWith.textContent = elem.freeWith;
+        freeWith.setAttribute("class", "freeWith");
+
+        var description = document.createElement("p");
+        description.textContent = elem.desc;
+        description.setAttribute("class", "description");
+
+        div2.append(name, detail, freeWith, description);
+        div2.setAttribute("class", "boxx");
+
+        document.getElementById("dis").append(div1, div2);
+      });
+    }
+  </script>
+</html>
