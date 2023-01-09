@@ -49,7 +49,7 @@
           </div>
           <div class="signin">
             <i class="fa fa-user-circle" style="font-size: 22px"></i>
-            <span>Sign in/up</span>
+            <a href="./Project/html/Signup.html"><span>Sign in/up</span></a>
           </div>
           <div class="bag">
             <i
@@ -57,23 +57,50 @@
               style="font-size: 22px"
               aria-hidden="true"
             ></i>
-            <span> Bag</span>
+            <a href="./Bag page/ProductPage.html"><span> Bag</span></a>
           </div>
         </div>
       </div>
-
+      <!-- <a href="../"></a> -->
       <div id="dropdown">
-        <div onmouseover="showshop()" id="shop">SHOP</div>
+        <div
+          onmouseover="showshop()"
+          onclick="window.location.href='../projectData/HTML/Gifts.html'"
+          ;
+          id="shop"
+        >
+          SHOP
+        </div>
 
-        <div onmouseover="shownew()" id="new">NEW!</div>
+        <div
+          onmouseover="shownew()"
+          onclick="window.location.href='../NewArrival/newArrival.html'"
+          ;
+          id="new"
+        >
+          NEW!
+        </div>
 
-        <div onmouseover="showbrand()" id="brand">BRANDS</div>
+        <div
+          onmouseover="showbrand()"
+          onclick="window.location.href='../mybrand/brand.html'"
+          ;
+          id="brand"
+        >
+          BRANDS
+        </div>
 
         <div onmouseover="showexplore()">EXPLORE</div>
 
         <div onmouseover="showevent()">EVENTS</div>
 
-        <div onmouseover="showreward()">BLUEREWARDS</div>
+        <div
+          onmouseover="showreward()"
+          onclick="window.location.href='../BlueRewards/index.html'"
+          ;
+        >
+          BLUEREWARDS
+        </div>
 
         <div onmouseover="showroutine()">ROUTINE REBOOT!</div>
       </div>

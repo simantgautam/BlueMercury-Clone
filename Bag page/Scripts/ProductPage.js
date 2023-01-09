@@ -150,6 +150,11 @@ if(data.length==0){
     var emptybutton=document.createElement("button")
     emptybutton.innerText="SHOP OUR PRODUCTS"
     emptybutton.setAttribute("id","emptybtn")
+    emptybutton.setAttribute("href","./projectData/HTML/Gifts.html")
     emptydiv.append(emptymsg,emptybutton)
     document.querySelector("body").append(emptydiv)
+}
+document.getElementById("emptybtn").addEventListener("click",emptycallshop)
+function emptycallshop(){
+  window.location.href='../projectData/HTML/Gifts.html';
 }
