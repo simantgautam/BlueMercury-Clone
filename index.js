@@ -4,6 +4,7 @@ function showshop(){
   xevent.style.display="none";
   xshop.style.display="block";
   xshop.style.display="flex";
+  xnew.style.display="none";
   xshop.display.border.color="1px solid crimson"
 }
 function hideshop(){
