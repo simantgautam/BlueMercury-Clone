@@ -4,19 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProductPage</title>
-    <link rel="stylesheet" href="./Styles/ProductPage.css" />
-    <link
-      rel="icon"
-      href="C:\Users\Amit\Downloads\b.png"
-      type="image/icon type"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="../navbar/upper.css" />
+    <title>Sign up Page</title>
+    <link rel="stylesheet" href="./html/Signup.css" />
   </head>
+
   <body>
     <nav id="main_nav">
       <div class="top_part">
@@ -49,7 +40,7 @@
           </div>
           <div class="signin">
             <i class="fa fa-user-circle" style="font-size: 22px"></i>
-            <a href="../Project/Signup.html"><span>Sign in/up</span></a>
+            <a href="./Signup.html"><span>Sign in/up</span></a>
           </div>
           <div class="bag">
             <i
@@ -61,7 +52,7 @@
           </div>
         </div>
       </div>
-      <a href="../routinepage/Routine.html"></a>
+      <!-- <a href="../BlueRewards/index.html"></a> -->
       <div id="dropdown">
         <div
           onmouseover="showshop()"
@@ -95,16 +86,17 @@
         <div onmouseover="showevent()">EVENTS</div>
 
         <div
-          onmouseover="showreward()"
-          onclick="window.location.href='../BlueRewards/index.html'"
-          ;
+          onmouseover="showreward() "
+          onclick="window.location.href='../BlueRewards/index.html'
+        "
         >
           BLUEREWARDS
         </div>
 
         <div
           onmouseover="showroutine()"
-          onclick="window.location.href='../routinepage/Routine.html'"
+          onclick="window.location.href='../routinepage/Routine.html'
+        "
         >
           ROUTINE REBOOT!
         </div>
@@ -122,17 +114,82 @@
       <div class="category">
         <ul>
           <li style="color: black">BESTSELLERS</li>
-          <li>SKINCARE</li>
-          <li>MAKEUP</li>
-          <li>HAIR CARE</li>
-          <li>BATH & BODY</li>
-          <li>FRAGRANCE</li>
-          <li>TOOLS & ACCESSORIES</li>
-          <li>HOME & LIFESTYLE</li>
-          <li>SUN CARE</li>
-          <li>MEN</li>
-          <li>GIFTS</li>
-          <li>LAST CHANCE & OFFERS</li>
+          <li type="none" value="SkinCare" id="SkinCare">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/projectData/HTML/skinCare.html"
+              >SKINCARE</a
+            >
+          </li>
+          <li type="none" value="">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/projectData/HTML/MakeUp.html"
+              >MAKEUP</a
+            >
+          </li>
+          <li type="none" value="">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/projectData/HTML/Mens.html"
+              >MEN</a
+            >
+          </li>
+          <li type="none" value="">
+            <a href="/BlueMercury-Clone-Team-Practice/NewArrival/Bath&Body.html"
+              >BATH & BODY</a
+            >
+          </li>
+          <li type="none" value="">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/projectData/HTML/Fragrance.html"
+              >FRAGRANCE</a
+            >
+          </li>
+          <li type="none" value="">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/NewArrival/Tools&Accessories.html"
+              >TOOLS & ACCESSORIES
+            </a>
+          </li>
+          <li type="none" value="">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/projectData/HTML/HairCare.html"
+              >HAIR CARE</a
+            >
+          </li>
+          <li type="none" value="">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/projectData/HTML/SunCare.html"
+              >SUN CARE</a
+            >
+          </li>
+          <li type="none" value="">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/projectData/HTML/Mens.html"
+              >MEN
+            </a>
+          </li>
+          <li type="none" value="Gifts" target="">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/projectData/HTML/Gifts.html"
+              >GIFTS
+            </a>
+          </li>
+          <li type="none" value="">
+            <a
+              href="/BlueMercury-Clone-Team-Practice/NewArrival/newArrival.html"
+              >LAST CHANCE & OFFERS</a
+            >
+          </li>
+          <!-- <li >SKINCARE</li>
+    <li>MAKEUP</li>
+    <li>HAIR CARE</li>
+    <li>BATH & BODY</li>
+    <li>FRAGRANCE</li>
+    <li>TOOLS & ACCESSORIES</li>
+    <li>HOME & LIFESTYLE </li>
+    <li>SUN CARE</li>
+    <li>MEN</li>
+    <li>GIFTS</li>
+    <li>LAST CHANCE & OFFERS </li> -->
         </ul>
         <hr />
       </div>
@@ -410,221 +467,23 @@
       </div>
     </div>
 
-    <!--Dropdown for Offer-->
-    <div id="offer">
-      <p class="item-1">Free Gifts with purchase. Browse Now ></p>
-
-      <p class="item-2">Free Shipping for BlueReward Members</p>
-
-      <p class="item-3">Free Samples with all Orders</p>
+    <div class="nav">
+      <a href="./Signup.html">Signup</a>
+      <a href="./Login.html">Signin</a>
     </div>
-    <div id="parent">
-      <h1>YOUR BAG</h1>
-      <h3>Your cart(<span id="items">0</span> item)</h3>
-      <div>
-        <input type="checkbox" id="giftcheckbox" name="giftcheckbox" />
-        <label for="giftcheckbox"> IS THIS ORDER A GIFT?</label>
-        <p>The price of your order will be hidden on the gift receipt.</p>
-      </div>
-      <!-- cart details table -->
-      <table id="tableId">
-        <thead>
-          <tr>
-            <th>Ready to Ship</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Append your data here  -->
-        </tbody>
-      </table>
-      <!-- Sample gifts section -->
-      <h3>Our Gift to You</h3>
-      <p>Free trial-size products with your qualifying purchase</p>
-      <div id="gifts">
-        <div>
-          <img
-            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/free-surprise-samples-main_1_small.jpg?v=1668719018"
-            alt=""
-          />
-          <button id="samples">Add 3 Samples</button>
-        </div>
-        <div>
-          <img
-            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/surprise-mystery-samples-1_1.jpg?v=1668695719"
-            alt=""
-          />
-          <p>SURPRISE #1</p>
-        </div>
-        <div>
-          <img
-            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/surprise-mystery-samples-1_1.jpg?v=1668695719"
-            alt=""
-          />
-          <p>SURPRISE #2</p>
-        </div>
-        <div>
-          <img
-            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/surprise-mystery-samples-1_1.jpg?v=1668695719"
-            alt=""
-          />
-          <p>SURPRISE #3</p>
-        </div>
-      </div>
-      <!-- checkout button -->
-      <div id="totalfooter">
-        <h3>Subtotal $<span id="total">0</span></h3>
-        <p>
-          Shipping, Taxes, Beauty Cards, and additional discounts applied at
-          checkout
-        </p>
-        <a href="./CustomerInfoPage.html">
-          <button>CHECKOUT</button>
-        </a>
-      </div>
+    <div id="signup">
+      <h1>Create Account</h1>
+      <h2 id="heading">
+        Complete the form below to create a bluemercury.com <br />
+        account.
+      </h2>
+      <form>
+        <input type="text" id="name" placeholder="Enter Name" />
+        <input type="email" id="email" placeholder="Enter E-mail" />
+        <input type="password" id="password" placeholder="Enter password" />
+        <input type="submit" value="Submit" />
+      </form>
     </div>
-    <!--Footer-->
-    <footer class="footer-part">
-      <div class="newsletter">
-        <p>Get Expert Beauty Insight & Offers</p>
-        <form id="footer-mail-collect" onsubmit="overlaymsg(event)">
-          <div id="mail-submission-success-overlay">
-            <div>
-              <!-- <img src="https://i2.wp.com/i.pinimg.com/originals/70/a5/52/70a552e8e955049c8587b2d7606cd6a6.gif"/> -->
-              <img
-                src="https://thumbs.gfycat.com/ShyCautiousAfricanpiedkingfisher-max-1mb.gif"
-                alt="successful"
-              />
-              <p id="success-msg">You will hear from us soon!</p>
-              <div onclick="overlayMsgHide()" id="hide-overlay">Done</div>
-            </div>
-          </div>
-          <input
-            class="footer-mail e-mail"
-            id="newsletter-mail-input"
-            name="e-mail"
-            type="email"
-            placeholder="EMAIL ADDRESS"
-          />
-          <button id="arrow-submit-btn" type="submit">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-          </button>
-        </form>
-        <p>
-          To learn more about how we use your information and your rights, see
-          Privacy Note
-        </p>
-        <p class="icons">
-          <a href="https://twitter.com/bluemercury" target="_blank"
-            ><i class="fa fa-twitter" aria-hidden="true"></i
-          ></a>
-          <a href="https://www.pinterest.com/bluemercury/" target="_blank"
-            ><i class="fa fa-pinterest-p" aria-hidden="true"></i
-          ></a>
-          <a href="https://facebook.com/bluemercury" target="_blank"
-            ><i class="fa fa-facebook" aria-hidden="true"></i
-          ></a>
-          <a href="https://instagram.com/bluemercury" target="_blank"
-            ><i class="fa fa-instagram" aria-hidden="true"></i
-          ></a>
-          <a
-            href="https://www.youtube.com/channel/UCrgUXfV7IIFllEQMbzd9J3A"
-            target="_blank"
-            ><i class="fa fa-youtube-play" aria-hidden="true"></i
-          ></a>
-        </p>
-        <p>Copyright 2021 bluemercury. All Rights Reserved.</p>
-      </div>
-
-      <div class="footer-navwrap">
-        <div class="bluemercury-links">
-          <h2>Bluemercury</h2>
-          <ul>
-            <li>
-              <a href="#">Our Company</a>
-            </li>
-            <li>
-              <a href="#">Store Locator</a>
-            </li>
-            <li>
-              <a href="#">In-Store & Online Events</a>
-            </li>
-            <li>
-              <a href="#">Spa Menu</a>
-            </li>
-            <li>
-              <a href="#">Press</a>
-            </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
-            <li>
-              <a href="#">Vendor Submissions</a>
-            </li>
-            <li>
-              <a href="#">Diversity & Inclusion</a>
-            </li>
-          </ul>
-        </div>
-        <div class="myaccount-links">
-          <h2>My Account</h2>
-          <ul>
-            <li>
-              <a href="#">My Account</a>
-            </li>
-            <li>
-              <a href="#">BlueRewards</a>
-            </li>
-            <li>
-              <a href="#">Gift Card Balance Checker</a>
-            </li>
-          </ul>
-        </div>
-        <div class="customerservice-links">
-          <h2>Customer Service</h2>
-          <ul>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-            <li>
-              <a href="#">Help & FAQ</a>
-            </li>
-            <li>
-              <a href="#">Shipping, Returns & Exchanges</a>
-            </li>
-            <li>
-              <a href="#">Gift Cards</a>
-            </li>
-            <li>
-              <a href="#">Offers & Promotions</a>
-            </li>
-            <li>
-              <a href="#">Klarna</a>
-            </li>
-          </ul>
-        </div>
-        <div class="resources-links">
-          <h2>Resources</h2>
-          <ul>
-            <li>
-              <a href="#">Terms & Conditions</a>
-            </li>
-            <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#">Accessiblility</a>
-            </li>
-            <li>
-              <a href="#">COVID-19 Updates</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
   </body>
-  <script src="./Scripts/ProductPage.js"></script>
-  <script src="../navbar/upper.js"></script>
+  <script src="../js/Signup.js"></script>
 </html>

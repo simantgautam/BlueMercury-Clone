@@ -57,6 +57,7 @@ function method2fun() {
   );
   document.querySelector("#subtot").textContent = "$" + totalprice;
   document.querySelector("#totprice").textContent = "USD $" + totalprice;
+  document.querySelector("#shipfreeupd").textContent="$" + 10
 }
 
 

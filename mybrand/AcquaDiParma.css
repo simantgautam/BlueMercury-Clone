@@ -1,12 +1,6 @@
 body{
   overflow-x: hidden;
 }
-html {
-  scroll-behavior: smooth;
-}
-
- 
-
 #main_nav{
   width:100% ; 
   height: 120px; 
@@ -93,18 +87,11 @@ html {
   color: rgb(141, 141, 211);
 
 }
-#brand:hover{
-  text-decoration: underline;
-  text-underline-offset: 25px;
-  text-decoration-color: rgb(7, 7, 14);
-  text-decoration-thickness: 5px;
-}
 #dropdown >div:hover{
   text-decoration: underline;
   text-underline-offset: 26px;
   text-decoration-color: rgb(7, 7, 14);
 }
-
 #brand{
   text-decoration: underline;
   text-underline-offset: 25px;
@@ -112,22 +99,20 @@ html {
   text-decoration-thickness: 3px;
 }
 
+
+
  #dropdown_shop{
-  width: 101%;
-  margin-left: -1%;
-  margin-top: -11px;
+  width: 80%;
+  margin-left: 10%;
   height: 450px;
   display: none;
   margin-bottom: 50px;
    background-color:white; 
-   position: absolute;
-   z-index: 2;
  }
 
  .category{
 width: 25%;
 height: 100%;
-margin-left: 10.2%;
 display: flex;
  }
  
@@ -423,13 +408,13 @@ color: rgb(54, 53, 53);
   
 
 
-/***************MARGIN TOP=-10PX(EVENT,BLUEREWARDS,ROUTINE REBOOT!********************************************/
+
 
 #event_box{
   width: 100%;
   height: 400px;
   background-color: white;
-  margin-top: -10px;
+  margin-top: -11px;
   margin-left: -2%;
    position: absolute;
    display: none;
@@ -486,7 +471,7 @@ color: rgb(54, 53, 53);
   width: 101.5%;
   height: 400px;
   background-color: white;
-  margin-top: -10px;
+  margin-top: -11px;
   margin-left: -2%;
   display: none;
    position: absolute;
@@ -524,7 +509,7 @@ color: rgb(54, 53, 53);
     width: 101.5%;
     height: 400px;
     background-color: white;
-    margin-top: -10px;
+    margin-top: -11px;
     margin-left: -2%;
     display: none;
      position: absolute;
@@ -589,21 +574,7 @@ color: rgb(54, 53, 53);
     background-color: black;
   }
 
-  #allbrand{
-    width: 101.5%;
-    height:160px ;
-    margin-left: -7px;
-    margin-top: -21px;
-    background-color: rgb(240, 248, 248);
-  }
 
-  #allbrand >h1{
-    font-weight: lighter;
-    margin-left: 9%;
-    padding-top: 52px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(26, 23, 23);
-  }
 
 
   
@@ -656,80 +627,36 @@ color: rgb(54, 53, 53);
 
 
 
- #alpabet{
-  width: 64%;
-  height: 35px;
-  margin-left: 15%;
-  margin-top: 35px;
-  margin-bottom: 20px;
- }
  
- #alpabet >a{
-  text-decoration: none ;
-  margin-left: 13px;
-  font-size: 22px;
-  font-weight: lighter;
-  color: rgb(32, 29, 29);
+ #box_line{
+  height: -0.1px;
+  width: 100%;
+  height:100px ;
+  margin-left: 0px;
+  margin-top: -8px;
+  align-items: center;
+list-style-type: style white;
  }
 
-
-
-
- table{
-  width: 80%;
-  height: 140px;
-  margin-left: 10%;
-  margin-bottom: 10px;
- }
-
- .tableA{
-  margin-bottom: 20px;
- }
- .tableA >tr{
-  color: rgb(78, 76, 76);
- }
-
-
- .tableB >tr{
-  color: rgb(78, 76, 76);
- }
-
- .tableC >tr{
-  color: rgb(78, 76, 76);
- }
-
- .tableD >tr{
-  color: rgb(78, 76, 76);
- }
- .tableE >tr{
-  color: rgb(78, 76, 76);
- }
-
-
-
- #before_footer{
-  width: 102%;
-  height: 190px;
+ #product_details{
+  width: 100%;
+  height: 430px;
   display: flex;
-  margin-left: -1%;
-  background-color: rgb(235, 234, 234);
- }
- #before_footer >div{
-  width: 25%;
-  height: 100%;
-  text-align: center;
-  line-height: 50%;
-  border-bottom: 1px solid grey ;
- }
+}
 
- #before_footer >div >img{
-  width: 40px;
-  height:40px;
-  margin-top: 20px;
- }
+.product_details1{
+width: 52%;
+height: 430px;
+margin-left: 2%;
+font-family: Arial, Helvetica, sans-serif;
+}
+.product_details2 >img{
+width: 530px;
+height:280px;
+margin-top: 80px;
+margin-left: 50px;
+}
  
-
-
 
 
  .footer-part {
@@ -738,6 +665,7 @@ color: rgb(54, 53, 53);
   justify-content: space-around;
   padding: 15px 30px;
   margin-top: 15px;
+  border-top: 2px solid #dcdcdc;
 }
 
 .newsletter {
@@ -905,12 +833,3 @@ color: rgb(54, 53, 53);
   width: 70%;
   margin: auto;
 }
-
-
-
-
-
-
-
-
-
