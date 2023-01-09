@@ -10,67 +10,99 @@
     <link rel="stylesheet" href="brand.css">
 </head>
 <body>
-   <nav id="main_nav">
-    <div class="top_part">
+    <nav id="main_nav">
+      <div class="top_part">
         <div class="location">
-            <a href="http://www.google.com">
-                <i class="fa fa-map-marker" style="font-size:24px"></i>
-                STORE  SPA LOCATOR
-              </a>
+          <a href="http://www.google.com">
+            <i class="fa fa-map-marker" style="font-size: 24px"></i>
+            STORE & SPA LOCATOR
+          </a>
         </div>
         <div class="logo">
-            <a href="">
-               <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182" alt="">
-            </a>
+          <a href="./index.html">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluemercury-logo_1216x.png?v=1648743182"
+              alt=""
+            />
+          </a>
         </div>
-         <div class="nav_item">
-          <div class="wishlist" >
-            <i class="fa fa-heart" style="font-size:22px;" ></i>
+        <div class="nav_item">
+          <div class="wishlist">
+            <i class="fa fa-heart" style="font-size: 22px"></i>
             <span> Wishlist</span>
           </div>
           <div class="search">
-            <i class="fa fa-search"style="font-size:22px;"  aria-hidden="true"></i>
-               <span>Search</span>
-            
+            <i
+              class="fa fa-search"
+              style="font-size: 22px"
+              aria-hidden="true"
+            ></i>
+            <span>Search</span>
           </div>
           <div class="signin">
-            <i class="fa fa-user-circle" style="font-size:22px;"></i>
-            <span>Sign in/up</span>
+            <i class="fa fa-user-circle" style="font-size: 22px"></i>
+            <a href="../Project/Signup.html"><span>Sign in/up</span></a>
           </div>
           <div class="bag">
-
-            <i class="fa fa-shopping-bag" style="font-size:22px;" aria-hidden="true"></i>
-            <span>  Bag</span>
-              
+            <i
+              class="fa fa-shopping-bag"
+              style="font-size: 22px"
+              aria-hidden="true"
+            ></i>
+            <a href="../Bag page/ProductPage.html"><span> Bag</span></a>
           </div>
-         </div>
-    </div>
-    
+        </div>
+      </div>
+      <a href="../routinepage/Routine.html"></a>
+      <div id="dropdown">
+        <div
+          onmouseover="showshop()"
+          onclick="window.location.href='../projectData copy/HTML/Shop.html'"
+          ;
+          id="shop"
+        >
+          SHOP
+        </div>
 
-    <div id="dropdown">
-         <div onmouseover="showshop()"
-         id="shop">SHOP</div>
+        <div
+          onmouseover="shownew()"
+          onclick="window.location.href='../NewArrival/newArrival.html'"
+          ;
+          id="new"
+        >
+          NEW!
+        </div>
 
-     <div  onmouseover="shownew()"
-     id="new"  >NEW!</div>
+        <div
+          onmouseover="showbrand()"
+          onclick="window.location.href='../mybrand/brand.html'"
+          ;
+          id="brand"
+        >
+          BRANDS
+        </div>
 
-     <div onmouseover="showbrand()"
-       id="brand">BRANDS</div>
+        <div onmouseover="showexplore()">EXPLORE</div>
 
-     <div  onmouseover="showexplore()"
-     >EXPLORE   </div>
+        <div onmouseover="showevent()">EVENTS</div>
 
-     <div onmouseover="showevent()"
-     >EVENTS</div>
+        <div
+          onmouseover="showreward()"
+          onclick="window.location.href='../BlueRewards/index.html'"
+          ;
+        >
+          BLUEREWARDS
+        </div>
 
-     <div onmouseover="showreward()"
-     >BLUEREWARDS</div>
-
-     <div onmouseover="showroutine()"
-     >ROUTINE REBOOT!</div>
-</div>
-   </nav>
-   <hr id="upperdropdown_hr">
+        <div
+          onmouseover="showroutine()"
+          onclick="window.location.href='../routinepage/Routine.html'"
+        >
+          ROUTINE REBOOT!
+        </div>
+      </div>
+    </nav>
+    <hr id="upperdropdown_hr" />
    
 
 
@@ -382,8 +414,8 @@
         <a href="">A</a>
         <a href="">B</a>
         <a href="">C</a>
-        <a href="">D</a>
-        <a href="">E</a>
+        <a href="#tableC">D</a>
+        <a href="#tableC">E</a>
         <a href="">F</a>
         <a href="">G</a>
         <a href="">H</a>
@@ -421,13 +453,13 @@
     </table>
 
 
-    <table class="tableC">
+    <table id="tableC" class="tableC">
       <h1 style="margin: 0px 0px 0px 10%;font-family: Arial, Helvetica, sans-serif;font-weight: lighter;">C</h1>
       <hr style="width: 1065px;">
     </table>
 
 
-    <table class="tableD">
+    <table  id="tableD"  class="tableD">
       <h1 style="margin: 0px 0px 0px 10%;font-family: Arial, Helvetica, sans-serif;font-weight: lighter;">D</h1>
       <hr style="width: 1065px;">
     </table>
@@ -518,7 +550,7 @@
               ><i class="fa fa-youtube-play" aria-hidden="true"></i
             ></a>
           </p>
-          <p>Copyright 2021 bluemercury. All Rights Reserved.</p>
+          <p>Copyright 2023 bluemercury clone. All Rights Reserved.</p>
         </div>
   
         <div class="footer-navwrap">

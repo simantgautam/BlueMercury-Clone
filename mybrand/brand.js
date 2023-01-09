@@ -110,3 +110,30 @@ function hideroutine(){
 
 
 
+const newsletter_emails = [];
+
+
+function overlaymsg(e) {
+    e.preventDefault();
+    var mail = document.getElementById("newsletter-mail-input").value;
+    console.log(mail)
+    if (mail.trim() == "") {
+        alert("Please do not leave the field blank");
+        console.log("Here")
+        return 0;
+    } else {
+        newsletter_emails.push(mail);
+        localStorage.setItem('newsletter-list', JSON.stringify(newsletter_emails));
+        document.getElementById("success-msg").innerText = null;
+        document.getElementById("success-msg").innerText = `${mail} you will soon hear from us.`;
+        document.getElementById("mail-submission-success-overlay").style.display = "block";
+        mail = "";
+    }
+}
+
+function overlayMsgHide() {
+    mail = "";
+    document.getElementById("mail-submission-success-overlay").style.display = "none";   
+}
+
+
