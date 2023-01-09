@@ -10538,251 +10538,122 @@ var products = [
   ];
 
 
-localStorage.setItem("mainProducts", JSON.stringify(products));
-var All = JSON.parse(localStorage.getItem("mainProducts"));
-// sorting //
-var brandsort=[];
-for(let i=0;i<All.length;i++){
-brandsort.push(All[i]["productcard__brand"]);
-}
-brandsort=brandsort.sort();
-
-let firstHashMap=new Map();
-
-for(let i=0;i<brandsort.length;i++){
-    let data=brandsort[i];
-firstHashMap.set(data,brandsort);
-    }
-
-    var finalbrandsort=[]
-for (const x of firstHashMap.keys()) {
-    finalbrandsort.push(x);
-}
-
-
-// sorting complete final array is="finalbrandsort" //
-
-
-// cretate table//
-var brandA=[];
-for(var i=0;i<finalbrandsort.length;i++){
-    if(finalbrandsort[i].charAt(0)=='A' || finalbrandsort[i].charAt(0)=='a'){
-        brandA.push(finalbrandsort[i])
-    }
-}
-
+  localStorage.setItem("mainProducts", JSON.stringify(products));
+  var All = JSON.parse(localStorage.getItem("mainProducts"));
+  // sorting //
+  var brandsort=[];
+  for(let i=0;i<All.length;i++){
+  brandsort.push(All[i]["productcard__brand"]);
+  }
+  brandsort=brandsort.sort();
   
-var iA=0;
-while(iA<brandA.length){
-  var tr=document.createElement("tr");
-
-  var td1=document.createElement("td");
-  td1.innerHTML=brandA[iA++];
-  td1.className="link1";
-  if(iA>=brandA.length){
-    tr.append(td1);
-   document.querySelector(".tableA").append(tr);
-   break;
+  let firstHashMap=new Map();
+  
+  for(let i=0;i<brandsort.length;i++){
+      let data=brandsort[i];
+  firstHashMap.set(data,brandsort);
+      }
+  
+      var finalbrandsort=[]
+  for (const x of firstHashMap.keys()) {
+      finalbrandsort.push(x);
   }
-  var td2=document.createElement("td");
-  td2.innerHTML=brandA[iA++];
-  if(iA>=brandA.length){
-    tr.append(td1,td2);
-   document.querySelector(".tableA").append(tr);
-   break;
+  
+  
+  // sorting complete final array is="finalbrandsort" //
+  
+  
+  // cretate table//
+  var brandA=[];
+  for(var i=0;i<finalbrandsort.length;i++){
+      if(finalbrandsort[i].charAt(0)=='A' || finalbrandsort[i].charAt(0)=='a'){
+          brandA.push(finalbrandsort[i])
+      }
   }
-  var td3=document.createElement("td");
-  td3.innerHTML=brandA[iA++];
-  if(iA>=brandA.length){
-    tr.append(td1,td2,td3);
-   document.querySelector(".tableA").append(tr);
-   break;
-  }
-  var td4=document.createElement("td");
-  td4.innerHTML=brandA[iA++];
-  tr.append(td1,td2,td3,td4);
-  document.querySelector(".tableA").append(tr);
-}
-
-
-
-
-var brandB=[];
-for(var i=0;i<finalbrandsort.length;i++){
-    if(finalbrandsort[i].charAt(0)=='B' || finalbrandsort[i].charAt(0)=='b'){
-        brandB.push(finalbrandsort[i])
+  
+    
+  var iA=0;
+  while(iA<brandA.length){
+    var tr=document.createElement("tr");
+  
+    var td1=document.createElement("td");
+    td1.innerHTML=brandA[iA++];
+    td1.className="link1";
+    if(iA>=brandA.length){
+      tr.append(td1);
+     document.querySelector(".tableA").append(tr);
+     break;
     }
-}
-
-
-
-var iB=0;
-while(iB<brandB.length){
-  var tr=document.createElement("tr");
-
-  var td1=document.createElement("td");
-  td1.innerHTML=brandB[iB++];
-  if(iB>=brandB.length){
-    tr.append(td1);
-   document.querySelector(".tableB").append(tr);
-   break;
+    var td2=document.createElement("td");
+    td2.innerHTML=brandA[iA++];
+    if(iA>=brandA.length){
+      tr.append(td1,td2);
+     document.querySelector(".tableA").append(tr);
+     break;
+    }
+    var td3=document.createElement("td");
+    td3.innerHTML=brandA[iA++];
+    if(iA>=brandA.length){
+      tr.append(td1,td2,td3);
+     document.querySelector(".tableA").append(tr);
+     break;
+    }
+    var td4=document.createElement("td");
+    td4.innerHTML=brandA[iA++];
+    tr.append(td1,td2,td3,td4);
+    document.querySelector(".tableA").append(tr);
   }
-  var td2=document.createElement("td");
-  td2.innerHTML=brandB[iB++];
-  if(iB>=brandB.length){
-    tr.append(td1,td2);
+  
+  
+  
+  
+  var brandB=[];
+  for(var i=0;i<finalbrandsort.length;i++){
+      if(finalbrandsort[i].charAt(0)=='B' || finalbrandsort[i].charAt(0)=='b'){
+          brandB.push(finalbrandsort[i])
+      }
+  }
+  
+  
+  
+  var iB=0;
+  while(iB<brandB.length){
+    var tr=document.createElement("tr");
+  
+    var td1=document.createElement("td");
+    td1.innerHTML=brandB[iB++];
+    if(iB>=brandB.length){
+      tr.append(td1);
+     document.querySelector(".tableB").append(tr);
+     break;
+    }
+    var td2=document.createElement("td");
+    td2.innerHTML=brandB[iB++];
+    if(iB>=brandB.length){
+      tr.append(td1,td2);
+      document.querySelector(".tableB").append(tr);
+     break;
+    }
+    var td3=document.createElement("td");
+    td3.innerHTML=brandB[iB++];
+    if(iB>=brandB.length){
+      tr.append(td1,td2,td3);
+      document.querySelector(".tableB").append(tr);
+     break;
+    }
+    var td4=document.createElement("td");
+    td4.innerHTML=brandB[iB++];
+    tr.append(td1,td2,td3,td4);
     document.querySelector(".tableB").append(tr);
-   break;
   }
-  var td3=document.createElement("td");
-  td3.innerHTML=brandB[iB++];
-  if(iB>=brandB.length){
-    tr.append(td1,td2,td3);
-    document.querySelector(".tableB").append(tr);
-   break;
+  
+  
+  
+  
+  
+  //  table link to next page//
+  
+  document.querySelector(".link1").addEventListener("click",alink1) ;
+  function alink1(){
+    window.location.href = './AcquaDiParma.html';
   }
-  var td4=document.createElement("td");
-  td4.innerHTML=brandB[iB++];
-  tr.append(td1,td2,td3,td4);
-  document.querySelector(".tableB").append(tr);
-}
-
-
-
-
-var brandC=[];
-for(var i=0;i<finalbrandsort.length;i++){
-    if(finalbrandsort[i].charAt(0)=='C' || finalbrandsort[i].charAt(0)=='c'){
-        brandC.push(finalbrandsort[i])
-    }
-}
-
-var iC=0;
-while(iC<brandC.length){
-  var tr=document.createElement("tr");
-
-  var td1=document.createElement("td");
-  td1.innerHTML=brandC[iC++];
-  if(iC>=brandC.length){
-    tr.append(td1);
-   document.querySelector(".tableC").append(tr);
-   break;
-  }
-
-  var td2=document.createElement("td");
-  td2.innerHTML=brandC[iC++];
-  if(iC>=brandC.length){
-    tr.append(td1,td2);
-    document.querySelector(".tableC").append(tr);
-   break;
-  }
-
-  var td3=document.createElement("td");
-  td3.innerHTML=brandC[iC++];
-  if(iC>=brandC.length){
-    tr.append(td1,td2,td3);
-    document.querySelector(".tableC").append(tr);
-   break;
-  }
-  var td4=document.createElement("td");
-  td4.innerHTML=brandC[iC++];
-  tr.append(td1,td2,td3,td4);
-  document.querySelector(".tableC").append(tr);
-}
-
-
-
-
-var brandD=[];
-for(var i=0;i<finalbrandsort.length;i++){
-    if(finalbrandsort[i].charAt(0)=='D' || finalbrandsort[i].charAt(0)=='d'){
-        brandD.push(finalbrandsort[i])
-    }
-}
-
-var iD=0;
-while(iD<brandD.length){
-  var tr=document.createElement("tr");
-
-  var td1=document.createElement("td");
-  td1.innerHTML=brandD[iD++];
-  if(iD>=brandD.length){
-    tr.append(td1);
-   document.querySelector(".tableD").append(tr);
-   break;
-  }
-
-  var td2=document.createElement("td");
-  td2.innerHTML=brandD[iD++];
-  if(iD>=brandD.length){
-    tr.append(td1,td2);
-    document.querySelector(".tableD").append(tr);
-   break;
-  }
-
-  var td3=document.createElement("td");
-  td3.innerHTML=brandD[iD++];
-  if(iD>=brandD.length){
-    tr.append(td1,td2,td3);
-    document.querySelector(".tableD").append(tr);
-   break;
-  }
-  var td4=document.createElement("td");
-  td4.innerHTML=brandD[iD++];
-  tr.append(td1,td2,td3,td4);
-  document.querySelector(".tableD").append(tr);
-}
-
-
-
-
-var brandE=[];
-for(var i=0;i<finalbrandsort.length;i++){
-    if(finalbrandsort[i].charAt(0)=='E' || finalbrandsort[i].charAt(0)=='e'){
-        brandE.push(finalbrandsort[i])
-    }
-}
-
-var iE=0;
-while(iE<brandE.length){
-  var tr=document.createElement("tr");
-
-  var td1=document.createElement("td");
-  td1.innerHTML=brandE[iE++];
-  if(iE>=brandE.length){
-    tr.append(td1);
-   document.querySelector(".tableE").append(tr);
-   break;
-  }
-
-  var td2=document.createElement("td");
-  td2.innerHTML=brandE[iE++];
-  if(iE>=brandE.length){
-    tr.append(td1,td2);
-    document.querySelector(".tableE").append(tr);
-   break;
-  }
-
-  var td3=document.createElement("td");
-  td3.innerHTML=brandE[iE++];
-  if(iE>=brandE.length){
-    tr.append(td1,td2,td3);
-    document.querySelector(".tableE").append(tr);
-   break;
-  }
-  var td4=document.createElement("td");
-  td4.innerHTML=brandE[iE++];
-  tr.append(td1,td2,td3,td4);
-  document.querySelector(".tableE").append(tr);
-}
-
-
-
-
-
-//  table link to next page//
-
-document.querySelector(".link1").addEventListener("click",alink1) ;
-function alink1(){
-  window.location.href = './AcquaDiParma.html';
-}
