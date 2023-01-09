@@ -11204,6 +11204,39 @@ concernfilter.addEventListener("click", () => {
   });
 });
 
+sizefilter.addEventListener("click", () => {
+  sizefilter.classList.toggle("open");
+  items = document.querySelectorAll(".size-item");
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("checked");
+      let value = item.innerText;
+      console.log(value);
+      PageProducts = All.filter((element) => {
+        return element.size === value;
+      });
+      displayProducts(PageProducts);
+    });
+  });
+});
+
+ingredientfilter.addEventListener("click", () => {
+  ingredientfilter.classList.toggle("open");
+  items = document.querySelectorAll(".ingredient-item");
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("checked");
+      let value = item.innerText;
+      console.log(value);
+      PageProducts = All.filter((element) => {
+        return element.ingredient === value;
+      });
+      displayProducts(PageProducts);
+    });
+  });
+});
 var xshop = document.getElementById("dropdown_shop");
 function showshop() {
   xevent.style.display = "none";
