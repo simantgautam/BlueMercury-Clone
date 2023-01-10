@@ -10742,14 +10742,24 @@ function cut() {
 function addToCart(element, ind) {
   let cartItems = JSON.parse(localStorage.getItem("cart-items")) || [];
   let qtyOfItems = document.getElementById("quantity" + ind).value;
-  element.qty = qtyOfItems;
-  element.img = element.Image;
-  element.name = element.productcard__brand;
-  element.desc = element.Title;
-  element.price = element.Price;
-  // console.log(element);
-  cartItems.push(element);
-  document.getElementById("cart" + ind).innerText = "ADDED TO BAG";
+  if (element.cart === true) {
+    document.getElementById("cart" + ind).innerText = "Product Already in Cart";
+  } else {
+    element.qty = qtyOfItems;
+    element.img = element.Image;
+    element.name = element.productcard__brand;
+    element.desc = element.Title;
+    if (element.Price.length > 3) {
+      let pricearr = element.Price.split("-");
+      element.price = pricearr[0];
+    } else {
+      element.price = element.Price;
+    }
+    element.cart = true;
+    cartItems.push(element);
+    document.getElementById("cart" + ind).innerText = "ADDED TO BAG";
+  }
+  localStorage.setItem("cart-items", JSON.stringify(cartItems));
 }
 
 //Addding to Whistlist
