@@ -52,7 +52,7 @@ function uuidv4() {
     //********************** DISPLAY PRODUCT FUNCTION*********************** */
    
     function displaySkinCare(data){
-        data.map(function(ele){
+        data.map(function(ele,ind){
                      
             let div = document.createElement('div');
             div.setAttribute('id',"card");
@@ -64,7 +64,7 @@ function uuidv4() {
             button.innerHTML=`<i class="fa-solid fa-heart"></i>`;
             button.addEventListener('click',function(){
                 // console.log(event.target.parentNode.innerHTML + "hii");
-                addToWishList(ele);                                                    //WISHLIST EventListener
+                addToWishList(ele,ind);                                                    //WISHLIST EventListener
             });
 
             let box = document.createElement('div');
@@ -195,10 +195,13 @@ function uuidv4() {
 
     let wishListArray = JSON.parse(localStorage.getItem("wish-list")) || [];
      
-    function addToWishList(ele){
+    function addToWishList(ele,ind){
     
         if(wishListArray.includes(ele)){
             event.target.style.webkitTextFillColor='#fff';
+            console.log(wishListArray,ind);
+            wishListArray.splice(ind,1);
+            localStorage.setItem("wish-list",JSON.stringify(wishListArray));
              alert(`${ele.name}Removed from Wishlist`); 
              event.target.style.cursor='pointer';       
         }
