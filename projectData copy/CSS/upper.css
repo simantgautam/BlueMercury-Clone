@@ -2,12 +2,14 @@
 body{
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
-  color: #2a3e5f;
+  color: #12284c;
 }
 #main_nav{
   width:100% ; 
   height: 120px; 
-  
+  font-family: 'Montserrat', sans-serif;
+  color: #12284c;
+  font-weight: bolder;
 }
 .top_part{
     
@@ -94,12 +96,12 @@ body{
 #dropdown >div:hover{
   text-decoration: underline;
   text-underline-offset: 26px;
-  text-decoration-color: rgb(7, 7, 14);
+  /* text-decoration-color: rgb(7, 7, 14); */
 }
 #brand{
   text-decoration: underline;
   text-underline-offset: 25px;
-  text-decoration-color: rgb(7, 7, 14);
+  /* text-decoration-color: rgb(7, 7, 14); */
   text-decoration-thickness: 3px;
 }
 
@@ -142,16 +144,16 @@ display: flex;
   text-decoration: none;
  }
  .category >ul >li{
-  
   margin-top: 20px;
-  /* color: rgb(88, 84, 84); */
-  font-size: 15px;
+  font-size: 19px;
+  line-height: 15px;
   text-decoration: none;
-  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'Montserrat', sans-serif;
  }
  .category >ul >li:hover{
   /* color: rgb(14, 13, 13); */
  font-size:17.5px ;
+ font-weight: bold;
   
  }
  .bycategory{
@@ -164,15 +166,16 @@ display: flex;
     margin-top: 27px;
    }
    .bycategory >ul >li{
-    
-    margin-top: 17px;
-    /* color: rgb(88, 84, 84); */
-    font-size: 15px;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    margin-top: 20px;
+  font-size: 19px;
+  line-height: 15px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
    }
    .bycategory >ul >li:hover{
     /* color: rgb(14, 13, 13); */
    font-size:17.5px ;
+   font-weight: bold;
     
    }
 
@@ -187,22 +190,24 @@ display: flex;
       margin-top: 27px;
      }
      .bybrand >ul >li{
-      margin-top: 10px;
-      /* color: rgb(100, 97, 97); */
-      font-size: 15px;
-      /* font-family: Arial, Helvetica, sans-serif; */
+      margin-top: 20px;
+  font-size: 19px;
+  line-height: 15px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
      }
      .bybrand >ul >li:hover{
       /* color: rgb(14, 13, 13); */
      font-size:17.5px ;
+     font-weight: bold;
       
      }
      .dropdown_img{
       margin-top: 15px;
      }
      .dropdown_img >p{
-    font-size: 14px;
-    margin-top: -10px;
+      font-size: 16px;
+      margin-top: -10px;
      }
 
 
@@ -243,7 +248,11 @@ display: flex;
 }
 
 .newcategory >ul >li{
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 19px;
+  line-height: 15px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 .newcategory >ul >li:hover{
   /* color: rgb(14, 13, 13); */
@@ -261,7 +270,7 @@ display: flex;
   height: 73%;
 }
 .newcategory_img1 >h3{
-  font-size: 15px;
+  font-size: 16px;
   /* font-family:Arial,  sans-serif ; */
   font-weight: lighter;
   margin-top: 3px;
@@ -278,13 +287,13 @@ display: flex;
   height: 73%;
 }
 .newcategory_img2 >h3{
-  font-size: 15px;
+  font-size: 16px;
   /* font-family:Arial,  sans-serif ; */
   font-weight: lighter;
   margin-top: 3px;
 }
 .newcategory_img2 >p{
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
@@ -328,7 +337,11 @@ display: flex;
 }
 
 #dropdown_brand >ul >li{
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 19px;
+  line-height: 15px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 #dropdown_brand >ul :hover{
   font-size: 17px;
@@ -380,7 +393,11 @@ list-style-type: none;
 }
 
 .explorecategory >ul >li{
-margin-top: 10px;
+  margin-top: 20px;
+  font-size: 19px;
+  line-height: 15px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 .explorecategory >ul >li:hover{
 /* color: rgb(14, 13, 13); */
@@ -393,7 +410,7 @@ height: 100%;
 font-size: 14px;
 }
 .explorecategory_img1 >h3{
-font-size: 15px;
+font-size: 16px;
 /* font-family:Arial,  sans-serif ; */
 font-weight: lighter;
 margin-top: 3px;
@@ -410,7 +427,7 @@ margin-top: 3px;
   font-size: 14px;
   }
   .explorecategory_img2 >h3{
-  font-size: 15px;
+  font-size: 16px;
   /* font-family:Arial,  sans-serif ; */
   font-weight: lighter;
   margin-top: 3px;
@@ -425,14 +442,14 @@ margin-top: 3px;
 
 
 #event_box{
-  width: 100%;
-  height: 400px;
-  background-color: white;
-  margin-top: -11px;
-  margin-left: -2%;
-   position: absolute;
-   display: none;
-  z-index: 2;
+  width: 101.5%;
+    height: 400px;
+    background-color: white;
+    margin-top: -11px;
+    margin-left: -2%;
+    display: none;
+     position: absolute;
+    z-index: 2;
  }
  #event_box >hr{
   margin-top: -2px;
@@ -447,13 +464,13 @@ margin-top: 3px;
   }
 
   .eventcategory_img1 >h3{
-    font-size: 15px;
+    font-size: 16px;
     /* font-family:Arial,  sans-serif ; */
     font-weight: lighter;
     margin-top: 3px;
     }
     .eventcategory_img2 >h3{
-      font-size: 15px;
+      font-size: 16px;
       /* font-family:Arial,  sans-serif ; */
       font-weight: lighter;
       margin-top: 3px;
@@ -472,7 +489,7 @@ margin-top: 3px;
 }
 
 #dropdown_event >div >p{
-  font-size: 14px;
+  font-size: 16px;
   margin-top: -10px;
   /* color: rgb(100, 97, 97); */
 }
@@ -483,13 +500,13 @@ margin-top: 3px;
 
 #reward_box{
   width: 101.5%;
-  height: 400px;
-  background-color: white;
-  margin-top: -11px;
-  margin-left: -2%;
-  display: none;
-   position: absolute;
-  z-index: 2;
+    height: 400px;
+    background-color: white;
+    margin-top: -11px;
+    margin-left: -2%;
+    display: none;
+     position: absolute;
+    z-index: 2;
  }
 
  #reward_box >hr{
@@ -508,6 +525,13 @@ margin-top: 3px;
   .rewardcategory >ul{
     list-style-type: none;
     /* color: rgb(100, 97, 97); */
+  }
+  .rewardcategory >ul>li {
+    margin-top: 20px;
+    font-size: 19px;
+    line-height: 15px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
   }
   .rewardcategory >ul >li:hover{
     /* color: black; */
@@ -542,7 +566,7 @@ margin-top: 3px;
     }
     #dropdown_routine >div  >h3{
       /* font-family:Arial,  sans-serif ; */
-     font-size: 14px;
+     font-size: 16px;
      /* color: rgb(100, 97, 97); */
     }
     #dropdown_routine >div  >p{
@@ -560,12 +584,16 @@ margin-top: 3px;
     }
 
     .routinecategory >ul >li{
-      margin-top: 10px;
+      margin-top: 20px;
+      font-size: 19px;
+      line-height: 15px;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
     }
     .routinecategory >ul >li:hover{
       /* color: black; */
       font-size: large;
-      font-weight: 900;
+      font-weight:bold;
     }
 
 
@@ -587,7 +615,7 @@ margin-top: 3px;
     /* color: black; */
     margin-left: 31%;
     margin-top: -14px;
-    background-color: black;
+    background-color: #12284c;
   }
 
 

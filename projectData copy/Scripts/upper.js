@@ -1,8 +1,10 @@
 var xshop=document.getElementById("dropdown_shop");
 function showshop(){
+  // document.getElementsByClassName("category").style.display="none";
   xevent.style.display="none";
   xshop.style.display="block";
   xshop.style.display="flex";
+  xnew.style.display="none";
   xshop.display.border.color="1px solid crimson"
 }
 function hideshop(){
@@ -86,8 +88,8 @@ function showreward(){
   xreward.style.display="block"; 
 }
 
-function hideevent(){
-  xevent.style.display="none";
+function hidereward(){
+  xreward.style.display="none";
 }
 
 
