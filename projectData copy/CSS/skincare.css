@@ -288,7 +288,7 @@
     font-size: 20px;
     font-family: Montserrat Medium,sans-serif;
     color: #12284c;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     padding: 40px;
 }
 /* #products-details>div{
@@ -365,13 +365,14 @@
     display: flex;
     margin: auto;
 } */
-#productInfo{
+#product_Info{
     width: 80%;
     margin: auto;
     line-height: 35px;
-    font-size: 60px;
+    margin-top: -15px;
+    margin-bottom: 5px;
     /* border: 2px solid red; */
-    font-size: 25px;
+    font-size: 22px;
     font-family: Montserrat Medium,sans-serif;
     color: #12284c;
     

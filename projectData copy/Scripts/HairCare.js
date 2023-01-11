@@ -12,7 +12,7 @@ function uuidv4() {
         let showPage = document.querySelector('#category');
         console.log(showPage);
         
-            let response1 = await fetch("../jsondata/Hair Care _ bluemercury.json");
+            let response1 = await fetch("/projectData copy/jsondata/Hair Care _ bluemercury.json");
             SkinCare = await response1.json();
             SkinCare = SkinCare.map(function(ele){
                ele.id = uuidv4();
@@ -52,7 +52,7 @@ function uuidv4() {
     //********************** DISPLAY PRODUCT FUNCTION*********************** */
    
     function displaySkinCare(data){
-        data.map(function(ele){
+        data.map(function(ele,ind){
                      
             let div = document.createElement('div');
             div.setAttribute('id',"card");
@@ -64,7 +64,7 @@ function uuidv4() {
             button.innerHTML=`<i class="fa-solid fa-heart"></i>`;
             button.addEventListener('click',function(){
                 // console.log(event.target.parentNode.innerHTML + "hii");
-                addToWishList(ele);                                                    //WISHLIST EventListener
+                addToWishList(ele,ind);                                                    //WISHLIST EventListener
             });
 
             let box = document.createElement('div');
@@ -151,6 +151,25 @@ function uuidv4() {
         })
     }
 
+    // *********************** Add to Cart *************/
+
+    
+ let cartDataArray = JSON.parse(localStorage.getItem("cart-items")) || [];
+     
+ function addToCartFunction(ele){
+ 
+     if(cartDataArray.includes(ele)){  
+          alert(`${ele.name} Already In the cart`); 
+          event.target.style.cursor='pointer';       
+     }
+     else{
+         alert(`${ele.name}Added To The Cart `);
+         event.target.style.cursor='no-drop';   
+         cartDataArray.push(ele);
+         localStorage.setItem("cart-items",JSON.stringify(cartDataArray));
+     }
+ }
+ 
 
     //**************SORTING FUNCTION ************************* */
 
@@ -195,10 +214,13 @@ function uuidv4() {
 
     let wishListArray = JSON.parse(localStorage.getItem("wish-list")) || [];
      
-    function addToWishList(ele){
+    function addToWishList(ele,ind){
     
         if(wishListArray.includes(ele)){
             event.target.style.webkitTextFillColor='#fff';
+            console.log(wishListArray,ind);
+            wishListArray.splice(ind,1);
+            localStorage.setItem("wish-list",JSON.stringify(wishListArray));
              alert(`${ele.name}Removed from Wishlist`); 
              event.target.style.cursor='pointer';       
         }
@@ -320,8 +342,10 @@ function displayAddToCartModal(ele){
     let AddToCartBtn = document.createElement('button');
     AddToCartBtn.setAttribute('id','addToCartBtn');
     AddToCartBtn.innerHTML = `<i class="fa-sharp fa-solid fa-cart-plus"></i> <span> ADD TO CART</span>`
+    AddToCartBtn.style.cursor='pointer';
+    // console.log(AddToCartBtn);
     AddToCartBtn.addEventListener('click',function(){
-        addToCart(ele);
+        addToCartFunction(ele);
     });
     div1.append(img);
     box.append(edition,category);
@@ -360,7 +384,8 @@ function displayAddToCartModal(ele){
 
 //********************FUNCTION DISPLAY DETAILS OD PRODUCTS ******************** */
 function displayDetailsOfProducts(ele){
-    document.getElementById('products-details').innerHTML = "";
+    document.querySelector('#products-details').innerHTML = "";
+    document.querySelector('#product_Info').innerHTML ="";
 
     let parent =  document.createElement('div');
     parent.style.display="flex";
@@ -450,8 +475,9 @@ function displayDetailsOfProducts(ele){
  
      let AddToCartBtn = document.createElement('button');
      AddToCartBtn.setAttribute('id','addToBagBtn');
+     AddToCartBtn.style.cursor='pointer'
      AddToCartBtn.addEventListener('click',function(){
-        addToCart(ele);
+        addToCartFunction(ele);
      })
 
      let bagIcon = document.createElement('p');
@@ -513,9 +539,7 @@ function displayDetailsOfProducts(ele){
  
 
     
-    
-    //  div3.append(img);
-    //  div.append(imgContainer,targetedImg,);
+   
      box.append(edition,category);
      priceBox.append(price,span);
      giftCard.append(p,gift,offer);
@@ -527,33 +551,36 @@ function displayDetailsOfProducts(ele){
      CartBox.append(AddToCartBtn,cartlistBox) 
      div1.append(brand,name,price,box,priceBox,description,giftVoucher,CartBox);
  
-     //console.group(AddToCartBtn);
- 
-     let infoDiv = document.createElement('div');
-     infoDiv.setAttribute('id','productInfo');
+    
      let info = document.createElement('h3');
      info.innerText = 'Product Information';
     let para = document.createElement('p');
     para.innerText ='Uniquely designed to firm, hydrate, and smooth, this cult-classic duo is the perfect way to treat yourself or introduce a loved one to these amazing products. These two creams are all you need to keep your skin smooth and radiant. '
      
-    infoDiv.append(info,para);
+    let benefits=document.createElement('h3')
+    benefits.innerText='Key Benefits';
+    let para1 = document.createElement('p');
+    para1.innerText = 'This gentle rinse off foaming cleanser fights this new enemy “germ warfare,” containing a unique and patented form of medical grade silver MicroSilver BG that offers powerful anti-bacterial and anti-viral properties that eliminate and defend against pathogens and environmental hazards, invisibly remaining on the skin surface where it is needed most.'
+    console.log(document.querySelector('#product_Info'))
+    document.querySelector('#product_Info').append(info,para,benefits,para1);
     //div.append(div1,div2);
     parent.append(div1);
    
      document.querySelector('#products-details').append(div1);
-    document.querySelector('#Detailed-data').append(infoDiv);
-     //document.getElementById('add-to-cart-modal').style.display='block';
-    // console.log(document.querySelector('#products-details'));
-   
     console.log(document.querySelector('.cart-img-container').innerHTML)
 
  }
+
+let selectedCategory = document.querySelector('.category').innerText;
+console.log(selectedCategory);
+
 
  let selectedBrand = document.querySelector('#brands');
 //  console.log(selectedBrand);
  selectedBrand.addEventListener('click', HandleByFilterByBrands);
 
  function HandleByFilterByBrands(){
+    console.log(selectedCategory);
     document.querySelector('#container').innerHTML=null;
    let selected =event.target.innerText;
    if(selected == 'All Brands'){
@@ -713,51 +740,36 @@ selectedBenefit.addEventListener('click', HandleByFilterByselectedBenefit);
     
  }
 
- let selectedCleanser = document.querySelector('#cleansers-list');
-//  console.log(selectedBrand);
-selectedCleanser.addEventListener('click', HandleByFilterByselectedCleanser);
+//  let selectedCleanser = document.querySelector('#cleansers-list');
+// //  console.log(selectedBrand);
+// selectedCleanser.addEventListener('click', HandleByFilterByselectedCleanser);
 
- function HandleByFilterByselectedCleanser(){
-    document.querySelector('#container').innerHTML=null;
-    let selected =event.target.innerText;
-    let filteredCleanser = SkinCare.filter(function(ele){
-        console.log(selected==ele.cleanser);
-        return ele.cleanser==selected;
-    })
-    console.log(filteredCleanser);
-    if(filteredCleanser.length>0){
-        displaySkinCare(filteredCleanser);
-    }else{
-        let div = document.createElement("div");
-       let h2 =  document.createElement("h2");
-       h2.innerText ="Sorry! Out Of Stock";
-       h2.style.textAlign="center";
-       div.style.width='60%';
-       div.style.margin='auto';
-        let img =document.createElement("img");
-        img.setAttribute('src',"https://www.pngfind.com/pngs/m/272-2727925_continue-shopping-empty-cart-png-transparent-png.png");
-        div.append(h2,img);
-        document.querySelector('#container').append(div);
-    }
+//  function HandleByFilterByselectedCleanser(){
+//     document.querySelector('#container').innerHTML=null;
+//     let selected =event.target.innerText;
+//     let filteredCleanser = SkinCare.filter(function(ele){
+//         console.log(selected==ele.cleanser);
+//         return ele.cleanser==selected;
+//     })
+//     console.log(filteredCleanser);
+//     if(filteredCleanser.length>0){
+//         displaySkinCare(filteredCleanser);
+//     }else{
+//         let div = document.createElement("div");
+//        let h2 =  document.createElement("h2");
+//        h2.innerText ="Sorry! Out Of Stock";
+//        h2.style.textAlign="center";
+//        div.style.width='60%';
+//        div.style.margin='auto';
+//         let img =document.createElement("img");
+//         img.setAttribute('src',"https://www.pngfind.com/pngs/m/272-2727925_continue-shopping-empty-cart-png-transparent-png.png");
+//         div.append(h2,img);
+//         document.querySelector('#container').append(div);
+//     }
     
- }
-let cartData = JSON.parse(localStorage.getItem('cart-items')) || [];
- function addToCart(ele){
-    if(cartData.includes(ele)){
-         alert(`${ele.name}Already in the Cart`);
-         ele.qty=Number(ele.qty)+1; 
-        //  localStorage.setItem("cart-items",JSON.stringify(cartData));
-        //  event.target.style.cursor='pointer';       
-    }
-    else{
-       
-        alert(`${ele.name}Added To cart `);
-        // event.target.style.cursor='no-drop';   
-        cartData.push(ele);
-        localStorage.setItem("cart-items",JSON.stringify(cartData));
-    }
+//  }
 
-}
+ 
     
 }
   getTechProducts();

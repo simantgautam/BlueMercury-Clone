@@ -5,7 +5,7 @@ function showshop(){
   xshop.style.display="block";
   xshop.style.display="flex";
   xnew.style.display="none";
-  xshop.display.border.color="1px solid crimson"
+  // xshop.display.border.color="1px solid crimson"
 }
 function hideshop(){
   xshop.style.display="none";
@@ -19,7 +19,7 @@ function shownew(){
   xroutine.style.display="none"; 
   xevent.style.display="none";
   xnew.style.display="block";
-  xnew.display.border.color="1px solid crimson"
+  // xnew.display.border.color="1px solid crimson"
 }
 
 function hidenew(){
@@ -107,3 +107,5 @@ function showroutine(){
 function hideroutine(){
   xroutine.style.display="none";
 }
+
+

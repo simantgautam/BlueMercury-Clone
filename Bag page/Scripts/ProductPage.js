@@ -35,7 +35,7 @@ var cart = [
 ];
 
 //Cart display function
-localStorage.setItem("cart-items", JSON.stringify(cart));
+// localStorage.setItem("cart-items", JSON.stringify(cart));
 var data = JSON.parse(localStorage.getItem("cart-items")) || [];
 var totalprice = 0;
 displaycart(data);
