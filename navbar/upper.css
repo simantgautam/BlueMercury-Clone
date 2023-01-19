@@ -7,10 +7,9 @@ body{
     
   }
   .top_part{
-      
-      height: 60%;
+      color: rgb(108,133,163);
+      height: 70%;
       display: flex;
-      color: #0d3e46;
   }
   .location{
       width: 15%;
@@ -18,7 +17,7 @@ body{
       margin-left: 8px;
   }
   .location >a{
-      
+    color: rgb(131,146,163);
       text-decoration: none;
       font-size: 12px;
       font-weight: 200;
@@ -29,7 +28,8 @@ body{
       width: 15%;
       height: 40%;
      margin-left:26.6% ;
-     margin-top: 18px;   
+     margin-top: 18px;  
+     text-decoration: none; 
   }
   .logo >a >img{
       width: 100%; 
@@ -40,6 +40,7 @@ body{
       display: flex;
       margin-left: 13%; 
       cursor: pointer;
+      text-decoration: none;
   }
   .nav_item >div{
       margin-left: 10px;
@@ -62,12 +63,21 @@ body{
   .signin{
       width: 27%;
       height:100%;
-  }  
+      border-radius: 10px;
+
+  } 
+  .signin >a{
+    text-decoration: none;
+    color: rgb(131,146,163);
+  } 
   .bag{
       width: 15%;
       height:100%;
   }
-  
+  .bag >a {
+    text-decoration: none;
+    color: rgb(131,146,163);
+  }
   #upperdropdown_hr{
     width: 102%;
     margin-top: -5px;
@@ -84,7 +94,7 @@ body{
   }
   #dropdown >div{
     margin-left: 60px;
-    color: rgb(141, 141, 211);
+    color: rgb(108,133,163);
   
   }
   #dropdown >div:hover{
@@ -93,7 +103,6 @@ body{
     text-decoration-color: rgb(7, 7, 14);
   }
   #brand{
-    text-decoration: underline;
     text-underline-offset: 25px;
     text-decoration-color: rgb(7, 7, 14);
     text-decoration-thickness: 3px;

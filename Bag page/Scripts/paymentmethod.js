@@ -89,6 +89,7 @@ function payment2fun() {
   seccode.setAttribute("id", "seccode");
   seccode.setAttribute("placeholder", "Security code");
   seccode.setAttribute("maxlength",4)
+  seccode.setAttribute("type","password")
   div1.append(date, seccode);
   tr.append(cardno, cardname, div1);
   document.querySelector("#paymenttable").append(tr);

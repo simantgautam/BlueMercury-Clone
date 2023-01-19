@@ -4,6 +4,13 @@
     color: rgb(102, 102, 102);
     font-family: "Montserrat Regular", sans-serif;
   }
+  h3{
+    color: rgb(31,49,80);
+  }
+  h3 +p{
+    font-weight:400;
+    font-size: large;
+  }
   #emptydiv{
     width: 100px;
     height: 100px;
@@ -95,11 +102,7 @@
     color: rgb(102, 102, 102);
     cursor: pointer;
   }
-  #qty {
-    border-left: none;
-    border-right: none;
-    background-color: white;
-  }
+  
   label + p {
     padding-left: 22px;
     padding-bottom: 20px;
@@ -114,4 +117,10 @@
     margin-left: auto;
     padding: 15px;
     width: 300px;
+  }
+  td >button{
+   border-radius: 100px;
+   margin: 1px;
+   border: 1px solid rgb(102, 102, 102);
+   background-color: white;
   }

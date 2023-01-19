@@ -1,6 +1,7 @@
 #parent {
     display: flex;
     color: rgb(102, 102, 102);
+    letter-spacing: 0.8px;
   }
   #child1 {
     width: 60%;
@@ -225,7 +226,14 @@
     border: 1px solid #888;
     width: 60%;
   }
-  
+  .modal-content>a >button{
+    background-color: rgb(18, 40, 76);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    padding: 15px;
+  }
   /* The Close Button */
   .close {
     color: #aaaaaa;
