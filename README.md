@@ -6,5 +6,5 @@ Its a basic project of making a clone of Bluemercury website. Its a group projec
 2. Rutu Dhekolkar
 3. Keerthi malini
 4. Ragini Patil
-5. Suraj Aanand
+5. Suraj Anand
 6. Amit Kumar Thakur
