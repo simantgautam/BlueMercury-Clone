@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up Page</title>
-    <link rel="stylesheet" href="./html/Signup.css" />
-    <link rel="stylesheet" href="/navbar/upper.css">
+    <!-- <link rel="stylesheet" href="./html/Signup.css" /> -->
+    <link rel="stylesheet" href="../navbar/upper.css" />
+    <link rel="stylesheet" href="../newIndex.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <style>
+      input {
+        font-size: 14px;
+        padding: 10px 12px;
+      }
+      a,
+      h1,
+      h3,
+      p {
+        color: #12284c;
+      }
+      input[type="submit"] {
+        background-color: #12284c;
+        color: white;
+      }
+    </style>
   </head>
 
   <body>
@@ -468,23 +491,43 @@
       </div>
     </div>
 
-    <div class="nav">
-      <a href="./Signup.html">Signup</a>
-      <a href="./Login.html">Signin</a>
+    <div >
     </div>
-    <div id="signup">
-      <h1>Create Account</h1>
-      <h2 id="heading">
-        Complete the form below to create a bluemercury.com <br />
-        account.
-      </h2>
-      <form>
-        <input type="text" id="name" placeholder="Enter Name" />
-        <input type="email" id="email" placeholder="Enter E-mail" />
+    <div id="signup" class="m-auto text-center mt-5" style="max-width: 500px">
+      <h1>CREATE ACCOUNT</h1>
+      <p id="heading" class="fs-5">
+        Complete the form below to create a bluemercury.com account.
+      </p>
+      <form class="d-flex flex-column m-auto gap-3">
+        <input type="email" id="email" placeholder="E-mail" />
+        <input type="text" id="name" placeholder="First Name" />
+        <input type="text" id="name" placeholder="Last Name" />
         <input type="password" id="password" placeholder="Enter password" />
-        <input type="submit" value="Submit" />
+        <p>
+          By continuing, you agree to Bluemercury's
+          <a class="text-decoration-underline">Privacy Notice.</a>
+        </p>
+        <input
+          type="submit"
+          value="CREATE ACCOUNT"
+          class="w-50 m-auto fw-semibold"
+        />
       </form>
+      <p class="mt-3">
+        Already have a bluemercury.com account?
+        <a href="./Login.html">Sign In</a></p>
+      </p>
     </div>
   </body>
   <script src="./js/Signup.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"
+  ></script>
 </html>
